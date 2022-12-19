@@ -7,63 +7,61 @@ import {
 } from 'vitepress-theme-vue'
 import baseConfig from 'vitepress-theme-vue/config'
 
-const guideGroupItems = [
-  { text: 'Introduction', link: '/guide/introduction' },
-  { text: 'Getting Started', link: '/guide/' },
-  { text: 'Theme', link: '/guide/theme' }
+const presentation = [
+  { text: 'Le projet', link: '/blog/articles/presentation' },
+  { text: 'L\'élaboration du projet', link: '/blog/articles/development' },
 ]
 
-const componentGroupItems = [
-  { text: 'Button', link: '/guide/button-component' },
-  { text: 'Link', link: '/guide/link-component' }
+const construction = [
+  { text: 'Le terrassement', link: '/blog/articles/grading' },
+  { text: 'Les fondations', link: '/blog/articles/foundations' },
 ]
 
-const guideSidebar: SidebarGroup[] = [
-  { text: 'Guide', items: guideGroupItems },
-  { text: 'Components', items: componentGroupItems }
+const cards = [
+  { text: 'Permis de construire', link: '/blog/cards/building-permit' },
+  { text: 'Une autre fiche', link: '/blog/cards/another-card' }
+]
+
+const blogSidebar: SidebarGroup[] = [
+  { text: 'Articles', items:  presentation},
+  { text: 'Fiches', items: cards }
 ]
 
 const sidebar: MultiSidebarConfig = {
-  '/guide': guideSidebar
+  '/blog': blogSidebar
 }
 
 const nav: NavItem[] = [
   {
-    text: 'Guide',
+    text: 'Articles',
     items: [
-      { text: 'Guide', items: guideGroupItems },
-      { text: 'Components', items: componentGroupItems }
+      { text: 'Présentation du projet', items: presentation },
+      { text: 'La construction', items: construction }
     ],
-    activeMatch: `^/guide/`
+    activeMatch: `^/articles/`
   },
   {
-    text: 'Help',
-    items: [
-      { text: 'vitepress', link: 'https://vitepress.vuejs.org/' },
-      {
-        text: 'vitepress-theme-vue',
-        link: 'https://alex8088.github.io/vitepress-theme-vue/'
-      }
-    ]
+    text: 'Fiches',
+    items: cards
   }
 ]
 
 export default defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig,
-  lang: 'en-US',
-  title: 'create-docs',
-  description: 'Quickly generate a static site with VitePress.',
+  lang: 'fr-FR',
+  title: 'Le hangar à bananes',
+  description: 'L\'histoire de deux bricolos qui construisent leur garage à ossature bois',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }]
+    ['link', { rel: 'icon', href: '/banane.png', type: 'image/png' }]
   ],
   srcDir: 'docs',
   lastUpdated: true,
   themeConfig: {
-    navLogo: '/favicon.svg',
+    navLogo: '/banane.png',
     socialLinks: [
       {
-        icon: 'github',
-        link: 'https://github.com/alex8088/quick-start/tree/master/packages/create-docs'
+        icon: 'facebook',
+        link: 'https://www.facebook.com/profile.php?id=100088975922675'
       }
     ],
     nav,
