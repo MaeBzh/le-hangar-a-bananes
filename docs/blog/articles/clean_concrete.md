@@ -1,15 +1,15 @@
 # Le béton de propreté
 
-Le béton de propreté est un élément crucial dans la construction d'un garage à ossature bois. Il est utilisé en fond de fouille une fois le terrassement terminé et a pour but de créer une surface lisse, propre et facile à nettoyer avant le coulage du béton de fondation.
+Le béton de propreté est recommandé lors de la construction d'un ouvrage avec des semelles filantes, mais pas obligatoire. 
 
-Le béton de propreté est recommandé pour combler les défauts de nivellement et garantir une surface plane et stable. Selon le DTU 13.11, il est conseillé de réaliser un béton de propreté d'une épaisseur minimale de 4 cm, mais nous avons choisi de mettre en place un béton de propreté de 5 cm pour être sûrs de combler tous les défauts de nivellement.
+En effet, il n'est pas structurel, son role n'est pas de supporter votre construction, mais uniquement comme son nom l'indique de garder un fond de fouille propre. L'idéale c'est de réaliser se béton de propreté immédiatement après le terrassement. Cependant, si on veut se passer d'un béton de propreté, il faut que le fond de fouille soit impéccable et parfaitement de niveaux.
 
-Le béton de propreté est un béton maigre, c'est-à-dire qu'il contient peu de ciment par rapport à la quantité d'eau et de granulats qu'il contient. Nous avons choisi de le doser à 250 kg/m3 de ciment.
+Si le béton de propreté est recommandé, c'est pour combler les défauts de nivellement et garantir une surface plane et stable. Selon le DTU 13.11, un béton de propreté doit être d'une épaisseur minimale de 4 cm, mais nous avons choisi de mettre en place une couche de 5 cm.
 
-Pour calculer la quantité de béton nécessaire pour couler le béton de propreté de notre garage à ossature bois, il est important de connaître les dimensions de la surface à couvrir. Une fois ces dimensions connues, il suffit de multiplier la longueur par la largeur par l'épaisseur du béton souhaité (5 cm dans notre cas) pour obtenir le volume de béton nécessaire.
+Pour calculer la quantité de béton nécessaire pour couler le béton, il est important de connaître les dimensions de la surface à couvrir. Une fois ces dimensions connues, il suffit de multiplier la longueur par la largeur par l'épaisseur du béton souhaité (5 cm dans notre cas) pour obtenir le volume de béton nécessaire. Pour notre projet, nous avons calculé 0.8m3 de béton.
 
-Pour la fabrication du béton ciment à la bétonnière, il faut respecter certaines proportions entre les différents matériaux qui le composent : le ciment, l'eau, les granulats et éventuellement des additifs. La proportion de ciment dépend du type de béton souhaité (maigre, moyen ou riche) et de l'utilisation finale du béton. Pour notre béton de propreté, nous avons choisi une proportion de 250 kg/m3 de ciment.
+Pour la fabrication du béton à la bétonnière, il faut respecter certaines proportions entre les différents matériaux qui le composent : le liant (ici du ciment), l'eau, les granulats et éventuellement des additifs. La proportion de ciment dépend du type de béton souhaité (maigre, moyen ou riche) et de l'utilisation finale du béton. Pour notre béton de propreté, nous avons choisi une proportion de 250 kg/m3 de ciment, du ciment CEMI II, du sable 0/2 et du gravier en 4/16.
 
-Pour calculer les proportions de notre béton, nous nous sommes appuyé sur le site https://calculis.net/beton
-C'est relativement pratique pour doser correctement son béton en fonction du volume de sa bétonnière. Il apporte également 
-de bon conseils pour réussir son béton.
+Pour savoir comment nous avons calculés les quantités et les proportions des gachés, nous avons réalisé une fiche d'aide sur le béton de propreté.
+
+Prochaine étape: la pose des armatures métalliques et le coulage des fondations.
