@@ -1,3 +1,13 @@
-import { VPVTheme } from 'vitepress-theme-vue'
+import { EnhanceAppContext } from 'vitepress'
+
+import './tailwind.postcss'
 import './custom.css'
-export default VPVTheme
+
+import DefaultTheme from 'vitepress/theme'
+
+export default {
+  ...DefaultTheme,
+  enhanceApp(ctx: EnhanceAppContext) {
+    DefaultTheme.enhanceApp(ctx)
+  }  
+}
