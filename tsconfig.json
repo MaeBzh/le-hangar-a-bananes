@@ -6,7 +6,10 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "strict": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "allowJs": true
   },
-  "include": ["env.d.ts", ".vitepress/**/*"]
+  "files": ["vitepress-theme.d.ts", "shim.d.ts"],
+  "include": ["src/.vitepress/**/*", "src/vite.config.ts"],
+  "exclude": ["node_modules/"]
 }
