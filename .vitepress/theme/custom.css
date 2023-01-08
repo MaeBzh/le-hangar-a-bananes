@@ -1,0 +1,22 @@
+@media screen(md) {
+  .VPContentDoc:not(.has-sidebar.has-aside) {
+    padding: 64px 0 96px 64px !important;
+  }
+}
+
+:root {
+  --vp-c-blue: #4eafcc;
+  --vp-c-blue-soft: #3496b3;
+  --vp-c-blue-light: #83c7db;
+  --vp-c-blue-lighter: #d4ebfb;
+  --vp-c-blue-dark: #275766;
+  --vp-c-blue-darker: #34495e;
+
+  --vp-c-brand: var(--vp-c-blue-soft);
+  --vp-c-brand-light: var(--vp-c-blue-light);
+  --vp-c-brand-lighter: var(--vp-c-blue-lighter);
+  --vp-c-brand-dark: var(--vp-c-blue-dark);
+  --vp-c-brand-darker: var(--vp-c-blue-darker);
+
+  --vp-home-hero-name-color: var(--vp-c-brand);
+}
