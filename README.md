@@ -1,6 +1,10 @@
 # [Blog] Le-hangar-a-bananes
 
-  [<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
+[<img alt="Deployed with FTP Deploy Action" src="https://img.shields.io/badge/Deployed With-FTP DEPLOY ACTION-%3CCOLOR%3E?style=for-the-badge&color=0077b6">](https://github.com/SamKirkland/FTP-Deploy-Action)
+
+<p align="center">
+  <img alt="Logo" src="https://user-images.githubusercontent.com/12775492/211223614-d11591c5-4ecb-4158-a586-e37af7b9724d.png" style="width: 256px; height: auto;">
+</p>
 
 ## My VitePress-powered blog
 Welcome to my blog powered by VitePress, a static site generator based on Vue.js and Markdown.
