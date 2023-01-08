@@ -1,0 +1,36 @@
+name: Deploy Files
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        cache: 'npm'
+        cache-dependency-path: '**/package-lock.json'
+      
+    - name: 🔨 Build Project
+      run: |
+        npm ci
+        npm run build
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: ${{ secrets.PROD_REMOTE_HOST }}
+        username: ${{ secrets.PROD_REMOTE_USERNAME }}
+        password: ${{ secrets.PROD_REMOTE_PASSWORD }}
+        protocol: ${{ secrets.PROD_REMOTE_PROTOCOL }}
+        port: ${{ secrets.PROD_REMOTE_PORT }}
+        local-dir: "./.vitepress/dist/"
+        server-dir: "./"
