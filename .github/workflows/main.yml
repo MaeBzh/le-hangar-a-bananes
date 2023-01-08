@@ -38,5 +38,5 @@ jobs:
         user: ${{ secrets.PROD_REMOTE_USERNAME }}
         password: ${{ secrets.PROD_REMOTE_PASSWORD }}
         localDir: ".vitepress/dist"
-        remoteDir: "/var/www"
+        remoteDir: "/"
         options: "--delete --asci"
