@@ -32,5 +32,5 @@ jobs:
         password: ${{ secrets.PROD_REMOTE_PASSWORD }}
         protocol: ${{ secrets.PROD_REMOTE_PROTOCOL }}
         port: ${{ secrets.PROD_REMOTE_PORT }}
-        local-dir: "./.vitepress/dist"
+        local-dir: "./.vitepress/dist/"
         server-dir: "./"
