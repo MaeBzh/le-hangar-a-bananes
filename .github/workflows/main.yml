@@ -1,0 +1,38 @@
+name: Deploy Files
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+      - run: npm ci
+      - run: npm run build
+
+  deploy:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    needs: build
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Upload ftp
+      uses: sebastianpopp/ftp-action@releases/v2
+      with:
+        host: ${{ secrets.PROD_REMOTE_HOST }}
+        user: ${{ secrets.PROD_REMOTE_USERNAME }}
+        password: ${{ secrets.PROD_REMOTE_PASSWORD }}
+        localDir: ".vitepress/dist"
+        remoteDir: "/var/www"
+        options: "--delete --asci"
