@@ -6,36 +6,31 @@ on:
       - main
 
 jobs:
-  build:
-    if: ${{ github.ref == 'refs/heads/main' }}
-    name: Build
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+
+    - uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
-      - run: npm ci
-      - run: npm run build
-
-  deploy:
-    if: ${{ github.ref == 'refs/heads/main' }}
-    needs: build
-    name: Deploy
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 16
-    - run: ls -la
-    - uses: airvzxf/ftp-deployment-action@latest
+      
+    - name: 🔨 Build Project
+      run: |
+        npm ci
+        npm run build
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: ${{ secrets.PROD_REMOTE_HOST }}
-        user: ${{ secrets.PROD_REMOTE_USERNAME }}
+        username: ${{ secrets.PROD_REMOTE_USERNAME }}
         password: ${{ secrets.PROD_REMOTE_PASSWORD }}
-        local_dir: "./.vitepress/dist"
-        remote_dir: "./"
-        delete: "false"
+        protocol: ${{ secrets.PROD_REMOTE_PROTOCOL }}
+        port: ${{ secrets.PROD_REMOTE_PORT }}
+        local-dir: "./.vitepress/dist"
+        remote-dir: "./"
