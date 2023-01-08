@@ -31,8 +31,7 @@ jobs:
       with:
         node-version: 16
     - run: ls -la
-    - name: Upload from public_html via FTP
-      uses: airvzxf/ftp-deployment-action@latest
+    - uses: airvzxf/ftp-deployment-action@latest
       with:
         server: ${{ secrets.PROD_REMOTE_HOST }}
         user: ${{ secrets.PROD_REMOTE_USERNAME }}
