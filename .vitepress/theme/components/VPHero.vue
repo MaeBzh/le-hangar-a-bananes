@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Ref, inject } from 'vue'
 import type { DefaultTheme } from 'vitepress/theme'
-import VPButton from 'vitepress/dist/client/theme-default/components/VPButton.vue'
+import VPButton from './VPButton.vue'
 import VPImage from 'vitepress/dist/client/theme-default/components/VPImage.vue'
 
 export interface HeroAction {

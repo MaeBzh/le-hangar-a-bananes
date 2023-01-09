@@ -12,6 +12,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "./VPHero.vue": `${componentsDirectory}/VPHero.vue`,
+      "./VPButton.vue": `${componentsDirectory}/VPButton.vue`,
     },
   },
 });
