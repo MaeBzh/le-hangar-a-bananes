@@ -6,6 +6,11 @@ const nav: DefaultTheme.NavItem[] = [
     link: '/index',
     activeMatch: '^/$'
   },
+  {
+    text: 'A propos de nous',
+    link: '/about-us/index',
+    activeMatch: '/config/'
+  },
 ]
 
 export default nav

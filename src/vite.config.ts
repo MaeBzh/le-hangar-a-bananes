@@ -11,7 +11,9 @@ export default defineConfig({
 //   plugins: [ssr()],
   resolve: {
     alias: {
+      "./VPDoc.vue": `${componentsDirectory}/VPDoc.vue`,
       "./VPHero.vue": `${componentsDirectory}/VPHero.vue`,
+      "./VPTeamMembersItem.vue": `${componentsDirectory}/VPTeamMembersItem.vue`,
     },
   },
 });
