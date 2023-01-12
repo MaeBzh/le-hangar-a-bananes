@@ -35,4 +35,4 @@ jobs:
         local-dir: "./.vitepress/dist/"
         server-dir: "./"
         exclude: |
-          .env
+          .env.production

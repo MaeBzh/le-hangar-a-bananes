@@ -6,26 +6,43 @@ import { computed } from 'vue'
 const { theme, frontmatter } = useData()
 const { hasSidebar } = useSidebar()
 
-const footer = computed(() => ({
-  message:
-    frontmatter.value?.footer?.message ?? theme.value.footer?.message ?? '',
-  copyright:
-    frontmatter.value?.footer?.copyright ?? theme.value.footer?.copyright ?? '',
-  license:
-    frontmatter.value?.footer?.license ?? theme.value.footer?.license ?? ''
-}))
+const message = computed(() => {
+  return frontmatter.value?.footer?.message ?? theme.value.footer?.message ?? '';
+})
+
+const copyright = computed(() => {
+  return frontmatter.value?.footer?.copyright ?? theme.value.footer?.copyright ?? '';
+})
+
+const flaticons = computed(() => {
+  const flaticons = frontmatter.value?.footer?.flaticons ?? theme.value.footer?.flaticons ?? [];
+  let text = '';
+  
+  if (flaticons.length > 0) {
+    text = 'Icons made by ';
+    flaticons.forEach((flaticon, index) => {
+      text += `<a href="${flaticon.link}" title="${flaticon.author}">${flaticon.author}</a>`;
+      if (index < flaticons.length - 1) {
+        text += ', ';
+      }
+    });
+    text += ' from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>';
+  }
+
+  return text;
+})
 </script>
 
 <template>
   <footer
-    v-if="footer.message || footer.copyright || footer.license"
+    v-if="message || copyright || flaticons"
     class="VPFooter"
     :class="{ 'has-sidebar': hasSidebar }"
   >
     <div class="container">
-      <p v-if="footer.message" class="message" v-html="footer.message"></p>
-      <p v-if="footer.copyright" class="copyright" v-html="footer.copyright"></p>
-      <p v-if="footer.license" class="license" v-html="footer.license"></p>
+      <p v-if="message" class="message" v-html="message"></p>
+      <p v-if="copyright" class="copyright" v-html="copyright"></p>
+      <p v-if="flaticons" class="flaticons" v-html="flaticons"></p>
     </div>
   </footer>
 </template>
@@ -53,20 +70,20 @@ const footer = computed(() => ({
 
 .message,
 .copyright,
-.license {
+.flaticons {
   line-height: 24px;
   font-size: 14px;
   font-weight: 500;
   color: var(--vp-c-text-2);
 }
 
-.license {
+.flaticons {
   padding-top: 4px;
   line-height: 11px;
   font-size: 11px;
 }
 
-.license {
+.flaticons {
   order: 3;
 }
 .message {

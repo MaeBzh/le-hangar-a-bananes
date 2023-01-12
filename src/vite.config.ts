@@ -12,7 +12,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "./VPDoc.vue": `${componentsDirectory}/VPDoc.vue`,
-      "./components/VPFooter": `${componentsDirectory}/VPFooter.vue`,
+      "./components/VPFooter.vue": `${componentsDirectory}/VPFooter.vue`,
       "./VPHero.vue": `${componentsDirectory}/VPHero.vue`,
       "./VPTeamMembersItem.vue": `${componentsDirectory}/VPTeamMembersItem.vue`,
     },
