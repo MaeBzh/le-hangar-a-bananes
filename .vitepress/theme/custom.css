@@ -4,6 +4,23 @@
   }
 }
 
+.vp-doc .header-anchor {
+  margin-left: 0.13rem;
+}
+
+.vp-doc h1, .vp-doc h2 {
+  display: flex;
+  align-items: center;
+}
+
+.vp-doc h2 {
+  text-align: left;
+}
+
+.vp-doc p {
+  text-align: justify;
+}
+
 :root {
   --vp-c-blue: #4eafcc;
   --vp-c-blue-soft: #3496b3;
