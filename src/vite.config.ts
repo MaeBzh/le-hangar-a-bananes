@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
-import ssr from "vite-plugin-ssr/plugin";
 
 const componentsDirectory = resolve(
   __dirname,
@@ -8,9 +7,11 @@ const componentsDirectory = resolve(
 );
 
 export default defineConfig({
-//   plugins: [ssr()],
   resolve: {
     alias: {
+      "@src": resolve(__dirname, "../src"),
+      "@theme": resolve(__dirname, "../.vitepress/theme"),
+
       "./VPDoc.vue": `${componentsDirectory}/VPDoc.vue`,
       "./components/VPFooter.vue": `${componentsDirectory}/VPFooter.vue`,
       "./VPHero.vue": `${componentsDirectory}/VPHero.vue`,

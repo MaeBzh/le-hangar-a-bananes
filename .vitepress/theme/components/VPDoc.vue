@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { useRoute } from 'vitepress'
-import { computed, provide, ref } from 'vue'
-import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar.js'
-import VPDocAside from 'vitepress/dist/client/theme-default/components/VPDocAside.vue'
-import VPDocFooter from 'vitepress/dist/client/theme-default/components/VPDocFooter.vue'
+import { useRoute } from "vitepress";
+import { computed, provide, ref } from "vue";
+import { useSidebar } from "vitepress/dist/client/theme-default/composables/sidebar.js";
+import VPDocAside from "vitepress/dist/client/theme-default/components/VPDocAside.vue";
+import VPDocFooter from "vitepress/dist/client/theme-default/components/VPDocFooter.vue";
 
-const route = useRoute()
-const { hasSidebar, hasAside } = useSidebar()
+const route = useRoute();
+const { hasSidebar, hasAside } = useSidebar();
 
 const pageName = computed(() =>
-  route.path.replace(/[./]+/g, '_').replace(/_html$/, '')
-)
+  route.path.replace(/[./]+/g, "_").replace(/_html$/, "")
+);
 
-const onContentUpdated = ref()
-provide('onContentUpdated', onContentUpdated)
+const onContentUpdated = ref();
+provide("onContentUpdated", onContentUpdated);
 </script>
 
 <template>
@@ -29,20 +29,32 @@ provide('onContentUpdated', onContentUpdated)
             <VPDocAside>
               <template #aside-top><slot name="aside-top" /></template>
               <template #aside-bottom><slot name="aside-bottom" /></template>
-              <template #aside-outline-before><slot name="aside-outline-before" /></template>
-              <template #aside-outline-after><slot name="aside-outline-after" /></template>
-              <template #aside-ads-before><slot name="aside-ads-before" /></template>
-              <template #aside-ads-after><slot name="aside-ads-after" /></template>
+              <template #aside-outline-before>
+                <slot name="aside-outline-before" />
+              </template>
+              <template #aside-outline-after>
+                <slot name="aside-outline-after" />
+              </template>
+              <template #aside-ads-before>
+                <slot name="aside-ads-before" />
+              </template>
+              <template #aside-ads-after>
+                <slot name="aside-ads-after" />
+              </template>
             </VPDocAside>
           </div>
         </div>
       </div>
 
       <div class="content">
-        <div >
+        <div>
           <slot name="doc-before" />
           <main class="main">
-            <Content class="vp-doc" :class="pageName" :onContentUpdated="onContentUpdated" />
+            <Content
+              class="vp-doc"
+              :class="pageName"
+              :onContentUpdated="onContentUpdated"
+            />
           </main>
           <slot name="doc-footer-before" />
           <VPDocFooter />
@@ -120,8 +132,13 @@ provide('onContentUpdated', onContentUpdated)
 .aside-container {
   position: sticky;
   top: 0;
-  margin-top: calc((var(--vp-nav-height-desktop) + var(--vp-layout-top-height, 0px)) * -1 - 32px);
-  padding-top: calc(var(--vp-nav-height-desktop) + var(--vp-layout-top-height, 0px) + 32px);
+  margin-top: calc(
+    (var(--vp-nav-height-desktop) + var(--vp-layout-top-height, 0px)) * -1 -
+      32px
+  );
+  padding-top: calc(
+    var(--vp-nav-height-desktop) + var(--vp-layout-top-height, 0px) + 32px
+  );
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
@@ -144,7 +161,10 @@ provide('onContentUpdated', onContentUpdated)
 .aside-content {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - (var(--vp-nav-height-desktop) + var(--vp-layout-top-height, 0px) + 32px));
+  min-height: calc(
+    100vh -
+      (var(--vp-nav-height-desktop) + var(--vp-layout-top-height, 0px) + 32px)
+  );
   padding-bottom: 32px;
 }
 
