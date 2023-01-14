@@ -24,4 +24,4 @@ const buyMeACoffeeScripts = ({
     : [];
 };
 
-export default buymeacoffeeScripts;
+export default buyMeACoffeeScripts;
