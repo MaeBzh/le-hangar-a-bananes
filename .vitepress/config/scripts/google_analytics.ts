@@ -1,4 +1,4 @@
-
+import { loadEnv } from "vite";
 import { HeadConfig } from "vitepress";
 
 const { VITE_GOOGLE_ANALYTICS_ID } = loadEnv("production", process.cwd());
@@ -22,4 +22,4 @@ const googleAnalyticsScripts: HeadConfig[] = VITE_GOOGLE_ANALYTICS_ID
     ]
   : [];
 
-  export default googleAnalyticsScripts;
+export default googleAnalyticsScripts;
