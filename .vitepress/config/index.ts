@@ -8,7 +8,9 @@ const themeConfig = {
   nav,
   sidebar,
   socialLinks,
-  footer
+  footer,
+  lastUpdatedText: "Dernière mise à jour",
+  outlineTitle: "Sommaire",
 }
 
 export default themeConfig

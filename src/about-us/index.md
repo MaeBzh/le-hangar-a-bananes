@@ -1,6 +1,6 @@
 ---
 layout: doc
-aside: false
+aside: true
 
 footer:
   flaticons:
@@ -18,29 +18,24 @@ import {
   VPTeamPageTitle,
   VPTeamMembers,
 } from 'vitepress/theme'
+import VPDocLastUpdated from '@theme/components/VPDocLastUpdated.vue'
 import VPFlaticon from '@theme/components/VPFlaticon.vue'
 
 const members = [
   {
     avatar: 'https://avatars.githubusercontent.com/u/9337396',
     name: 'Julien',
-    title: 'Développeur web',
-    links: [
-      { icon: 'github', link: 'https://github.com/Tijawk' },
-      { icon: 'linkedin', link: 'https://www.linkedin.com/in/julienmoulin35/' }
-    ]
+    desc: 'Salutations 🖖, je m\'appel <b>Julien</b> et je suis développeur web. Ce blog est l\'occasion pour moi de combiner ma passion pour le développement web, le bricolage et le partage de connaissances. J\'ai adoré coder ce blog et il reste encore beaucoup de choses à faire. Pour ceux qui sont intéressés, le code source de ce blog est disponible sur <a href="https://github.com/MaeBzh/le-hangar-a-bananes" target="_blank" title="lien vers le repo github">notre compte Github</a>. "Que la force soit avec vous"'
   },
   {
     avatar: 'https://avatars.githubusercontent.com/u/12775492?v=4',
     name: 'Maelenn',
-    title: 'Développeuse web',
-    links: [
-      { icon: 'github', link: 'https://github.com/MaeBzh' },
-      { icon: 'linkedin', link: 'https://www.linkedin.com/in/maelenn-picaud/' }
-    ]
-  },
+    desc: 'Salut 👋, moi c\'est <b>Maelenn</b>, je suis également développeuse web suite à une reconversion professionnelle. Mon parcours initial en tapisserie d\'ameublement m\'a donné une passion pour tout ce qui est manuel : couture, tricot, dessin, peinture, crochet, etc. Ce projet d\'autoconstruction est une belle opportunité pour apprendre plein de nouvelles choses. A bientôt.',
+  }
 ]
 </script>
+
+<VPDocLastUpdated />
 
 # <VPFlaticon :flaticon="{src: '/flaticons/about-us/005-parchment.png', alt:'icône parchemin'}"/> Notre petite histoire
 
@@ -73,10 +68,6 @@ A l'origine, nous avions acheté une mini-caméra pour nous filmer tout au long 
 Probablement parce que nous sommes une famille un peu folle, et que nous aimons nous amuser ensemble. Notre réplique favorite quand l'un de nous fait le zouave, c'est "Tu es vraiment une sacrée banane". Il y a un concours permanent pour voir qui sera la plus grosse banane (et nous avons de sacrés champions !). En termes d'évolution, nous devons plus nous rapprocher des singes que d'autres choses... Du coup, pour un projet de garage qui va abriter une famille de bipèdes, "Le hangar à bananes" nous semblait être un nom approprié !
 
 <br/>
-Nous espérons que notre petite histoire vous a plu et nous vous souhaitons une bonne visite sur notre blog.
-
-<VPTeamPage>  
-  <VPTeamMembers
-    :members="members"
-  />
-</VPTeamPage>
+Nous espérons que notre petite histoire vous a plu. À bientôt !
+<hr />
+<VPTeamMembers :members="members"/>

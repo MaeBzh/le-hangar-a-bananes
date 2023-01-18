@@ -3,7 +3,7 @@ import { useRoute } from "vitepress";
 import { computed, provide, ref } from "vue";
 import { useSidebar } from "vitepress/dist/client/theme-default/composables/sidebar.js";
 import VPDocAside from "vitepress/dist/client/theme-default/components/VPDocAside.vue";
-import VPDocFooter from "vitepress/dist/client/theme-default/components/VPDocFooter.vue";
+import VPDocFooter from "./VPDocFooter.vue";
 
 const route = useRoute();
 const { hasSidebar, hasAside } = useSidebar();
