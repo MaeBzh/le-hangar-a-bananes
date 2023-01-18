@@ -14,7 +14,10 @@ const googleAnalyticsScripts: HeadConfig[] = VITE_GOOGLE_ANALYTICS_ID
       [
         "script",
         {},
-        `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${VITE_GOOGLE_ANALYTICS_ID}');`,
+        `window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${VITE_GOOGLE_ANALYTICS_ID}');`,
       ],
     ]
   : [];

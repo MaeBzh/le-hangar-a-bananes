@@ -31,9 +31,7 @@ defineProps<{
             {{ member.org }}
           </VPLink>
         </p>
-        <p v-if="member.desc" class="desc">
-          {{ member.desc }}
-        </p>
+        <p v-if="member.desc" class="desc" v-html="member.desc" />
         <div v-if="member.links" class="links">
           <VPSocialLinks :links="member.links" />
         </div>
@@ -178,6 +176,7 @@ defineProps<{
 
 .desc {
   margin: 0 auto;
+  text-align: justify;
 }
 
 .links {
