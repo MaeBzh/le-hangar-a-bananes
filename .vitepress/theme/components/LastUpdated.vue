@@ -19,14 +19,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <p class="VPLastUpdated">
+  <p class="LastUpdated">
     {{ theme.lastUpdatedText ?? 'Last updated' }}:
     <time :datetime="isoDatetime">{{ datetime }}</time>
   </p>
 </template>
 
 <style scoped>
-.VPLastUpdated {
+.LastUpdated {
   line-height: 24px;
   font-size: 14px;
   font-weight: 500;
@@ -34,7 +34,7 @@ onMounted(() => {
 }
 
 @media (min-width: 640px) {
-  .VPLastUpdated {
+  .LastUpdated {
     line-height: 32px;
     font-size: 14px;
     font-weight: 500;

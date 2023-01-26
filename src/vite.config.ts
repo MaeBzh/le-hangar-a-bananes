@@ -15,7 +15,6 @@ export default defineConfig({
       "./VPDoc.vue": `${componentsDirectory}/VPDoc.vue`,
       "./components/VPFooter.vue": `${componentsDirectory}/VPFooter.vue`,
       "./VPHero.vue": `${componentsDirectory}/VPHero.vue`,
-      "./VPTeamMembersItem.vue": `${componentsDirectory}/VPTeamMembersItem.vue`,
     },
   },
 });

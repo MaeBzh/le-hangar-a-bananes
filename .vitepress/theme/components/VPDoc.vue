@@ -67,19 +67,19 @@ provide("onContentUpdated", onContentUpdated);
 
 <style scoped>
 .VPDoc {
-  padding: 32px 24px 96px;
+  /* padding: 32px 24px 96px; */
   width: 100%;
 }
 
 @media (min-width: 768px) {
   .VPDoc {
-    padding: 48px 32px 128px;
+    /* padding: 48px 32px 128px; */
   }
 }
 
 @media (min-width: 960px) {
   .VPDoc {
-    padding: 32px 32px 0;
+    /* padding: 32px 32px 0; */
   }
 
   .VPDoc:not(.has-sidebar) .container {
@@ -176,10 +176,10 @@ provide("onContentUpdated", onContentUpdated);
 
 @media (min-width: 960px) {
   .VPDoc.has-aside .content {
-    padding: 0 32px 128px;
+    /* padding: 0 32px 128px; */
   }
   .VPDoc:not(.has-aside) .content {
-    padding: 0 0 128px;
+    /* padding: 0 0 128px; */
   }
 }
 

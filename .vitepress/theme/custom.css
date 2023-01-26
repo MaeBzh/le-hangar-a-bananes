@@ -1,9 +1,3 @@
-@media screen(md) {
-  .VPContentDoc:not(.has-sidebar.has-aside) {
-    padding: 64px 0 96px 64px !important;
-  }
-}
-
 .vp-doc .header-anchor {
   margin-left: 0.13rem;
 }
