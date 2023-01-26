@@ -9,7 +9,12 @@ const nav: DefaultTheme.NavItem[] = [
   {
     text: 'A propos de nous',
     link: '/about-us/index',
-    activeMatch: '/config/'
+    activeMatch: '/about-us/'
+  },
+  {
+    text: 'Nos outils',
+    link: '/tools/index',
+    activeMatch: '/tools/'
   },
 ]
 
