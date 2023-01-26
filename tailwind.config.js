@@ -1,11 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
-  content: [
-    "./.vitepress/**/*.js",
-    "./.vitepress/**/*.vue",
-    "./.vitepress/**/*.ts",
-  ],
-  safelist: ["html", "body"],
+  content: ["./.vitepress/**/*.{js,ts,vue}", "./src/**/*.{js,ts,vue,md}"],
   theme: {
     colors: {
       transparent: "transparent",
@@ -32,4 +27,5 @@ module.exports = {
       xl: "0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16)",
     },
   },
+  plugins: [],
 };
