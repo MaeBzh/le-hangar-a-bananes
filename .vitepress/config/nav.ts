@@ -16,6 +16,11 @@ const nav: DefaultTheme.NavItem[] = [
     link: '/tools/index',
     activeMatch: '/tools/'
   },
+  {
+    text: 'Statistiques',
+    link: '/stats/index',
+    activeMatch: '/stats/'
+  },
 ]
 
 export default nav
