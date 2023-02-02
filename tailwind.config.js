@@ -1,10 +1,14 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
+
 module.exports = {
+  darkMode: 'class',
   content: ["./.vitepress/**/*.{js,ts,vue}", "./src/**/*.{js,ts,vue,md}"],
   theme: {
     colors: {
       transparent: "transparent",
       current: "currentColor",
+      ...colors,
     },
     screens: {
       xs: "375px",

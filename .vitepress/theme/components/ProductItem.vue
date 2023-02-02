@@ -13,7 +13,7 @@
         </h3>
         <div
           v-if="product.stars"
-          class="bg-gray-200 rounded-full text-xs font-medium text-gray-800 hidden md:block"
+          class="text-xs font-medium hidden md:block"
         >
           <template v-for="n in product.stars" :key="n">❤️</template>
         </div>

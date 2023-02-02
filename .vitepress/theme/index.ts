@@ -11,6 +11,9 @@ import LastUpdated from "./components/LastUpdated.vue";
 import Products from "./components/Products.vue";
 import Tabs from "./components/Tabs.vue";
 import TeamMembers from "./components/TeamMembers.vue";
+import LastArticles from "./components/LastArticles.vue";
+import Landing from "./components/Landing.vue";
+import HomeStats from "./components/HomeStats.vue";
 
 export default {
   ...DefaultTheme,
@@ -23,6 +26,9 @@ export default {
       .component("TeamMembers", TeamMembers)
       .component("Tabs", Tabs)
       .component("Bar", Bar)
-      .component("Card", Card);
+      .component("Card", Card)
+      .component("Landing", Landing)
+      .component("HomeStats", HomeStats)
+      .component("LastArticles", LastArticles)
   },
 };

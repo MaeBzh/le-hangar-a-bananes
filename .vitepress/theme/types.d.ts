@@ -10,3 +10,10 @@ export type Product = {
   };
   image: DefaultTheme.ThemeableImage;
 };
+
+export type Article = {
+  title: string;
+  description: string;
+  date: string;
+  link: string;
+}
