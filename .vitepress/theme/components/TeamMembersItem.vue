@@ -1,6 +1,6 @@
 <template>
   <div
-    class="px-6 py-4 transition-colors duration-300 transform border rounded-xl group dark:border-gray-700"
+    class="px-6 py-4 transition-colors duration-300 transform border border-bl rounded-xl group"
   >
     <div class="flex flex-col sm:-mx-4 sm:flex-row">
       <img
@@ -9,23 +9,15 @@
         :alt="`Photo de ${member.name}`"
       />
       <div class="mt-4 sm:mx-4 sm:mt-0">
-        <h1
-          class="text-xl font-semibold text-gray-700 capitalize md:text-2xl dark:text-white group-hover:text-white"
-        >
+        <h1 class="text-xl font-semibold capitalize md:text-2xl">
           {{ member.name }}
         </h1>
-        <p
-          v-if="member.title"
-          class="mt-2 text-gray-500 dark:text-gray-300 group-hover:text-gray-300"
-        >
+        <p v-if="member.title" class="mt-2">
           {{ member.title }}
         </p>
       </div>
     </div>
-    <p
-      class="mt-4 text-gray-500 dark:text-gray-300 group-hover:text-gray-300"
-      v-html="member.desc"
-    />
+    <p class="mt-4" v-html="member.desc" />
   </div>
 </template>
 

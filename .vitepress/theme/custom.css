@@ -16,12 +16,19 @@
 }
 
 :root {
-  --vp-c-blue: #4eafcc;
-  --vp-c-blue-soft: #3496b3;
+  --vp-c-blue: #52b1cd;
+  --vp-c-blue-soft: #3291ad;
   --vp-c-blue-light: #83c7db;
-  --vp-c-blue-lighter: #d4ebfb;
-  --vp-c-blue-dark: #275766;
-  --vp-c-blue-darker: #34495e;
+  --vp-c-blue-lighter: #b5ddea;
+  --vp-c-blue-dark: #24677c;
+  --vp-c-blue-darker: #153e4a;
+
+  --vp-c-yellow: #f8c527;
+  --vp-c-yellow-soft: #d8a507;
+  --vp-c-yellow-light: #fad665;
+  --vp-c-yellow-lighter: #fce6a3;
+  --vp-c-yellow-dark: #9a7605;
+  --vp-c-yellow-darker: #5c4703;
 
   --vp-c-brand: var(--vp-c-blue-soft);
   --vp-c-brand-light: var(--vp-c-blue-light);
@@ -29,5 +36,33 @@
   --vp-c-brand-dark: var(--vp-c-blue-dark);
   --vp-c-brand-darker: var(--vp-c-blue-darker);
 
-  --vp-home-hero-name-color: var(--vp-c-brand);
+  --vp-button-brand-border: var(--vp-c-brand);
+  --vp-button-brand-text: var(--vp-c-text-dark-1);
+  --vp-button-brand-bg: var(--vp-c-brand);
+  --vp-button-brand-hover-border: var(--vp-c-brand-light);
+  --vp-button-brand-hover-text: var(--vp-c-text-dark-1);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-light);
+  --vp-button-brand-active-border: var(--vp-c-brand-light);
+  --vp-button-brand-active-text: var(--vp-c-text-dark-1);
+  --vp-button-brand-active-bg: var(--vp-button-brand-bg);
+
+  --vp-button-alt-border: var(--vp-c-brand);
+  --vp-button-alt-text: var(--vp-c-text-light-1);
+  --vp-button-alt-bg: transparent;
+  --vp-button-alt-hover-border: var(--vp-c-brand);
+  --vp-button-alt-hover-text: var(--vp-c-white);
+  --vp-button-alt-hover-bg: var(--vp-c-brand);
+  --vp-button-alt-active-border: var(--vp-c-brand);
+  --vp-button-alt-active-text: var(--vp-c-brand);
+  --vp-button-alt-active-bg: transparent;
+
+  --vp-button-sponsor-border: var(--vp-c-yellow-soft);
+  --vp-button-sponsor-text: var(--vp-c-text-light-2);
+  --vp-button-sponsor-bg: transparent;
+  --vp-button-sponsor-hover-border: var(--vp-c-yellow-soft);
+  --vp-button-sponsor-hover-text: var(--vp-c-white);
+  --vp-button-sponsor-hover-bg: var(--vp-c-yellow-soft);
+  --vp-button-sponsor-active-border: var(--vp-c-yellow-soft);
+  --vp-button-sponsor-active-text: var(--vp-c-yellow-soft);
+  --vp-button-sponsor-active-bg: transparent;
 }
