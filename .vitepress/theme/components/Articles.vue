@@ -34,8 +34,6 @@ import type { Article } from "../types";
 import { DefaultTheme } from "vitepress";
 import Flaticon from "./Flaticon.vue";
 
-type Image = DefaultTheme.ThemeableImage;
-
 export default defineComponent({
   name: "Articles",
   props: {
@@ -44,7 +42,7 @@ export default defineComponent({
       required: false,
     },
     icon: {
-      type: Image,
+      type: Object as () => DefaultTheme.ThemeableImage,
       required: false,
     },
     articles: {
