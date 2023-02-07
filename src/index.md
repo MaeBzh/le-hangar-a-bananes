@@ -24,6 +24,7 @@ footer:
     de bricolage passionnés et on a décidé de nous lancer dans
     l'aventure de la construction de notre propre garage de A à Z.
   </p>
+
   <p class="mb-6 text-base text-justify md:text-lg">
     Nous vous invitons à suivre notre aventure et à découvrir toutes
     les étapes de notre projet, des préparatifs à la réalisation
@@ -57,11 +58,11 @@ footer:
 </div>
 
 <HomeStats :stats="[
+  { title: 'Démarrage des travaux', value: '16/12/2022' },
   { title: 'Articles de blog', value: articles.length },
-  { title: 'Outils', value: tools.length },
-  { title: 'Dépenses', value: '~4500€' },
-  { title: 'Pauses café', value: 8 },
-]"  />
+  { title: 'Etape en cours', value: 'Terrassement' },
+  { title: 'Dépensés', value: '~4500€' },
+]"  />/
 
 <Partners :partners="[
   {

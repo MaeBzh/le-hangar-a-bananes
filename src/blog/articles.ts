@@ -1,27 +1,9 @@
 const articles = [
   {
     publishedAt: new Date(2022, 12, 16),
-    title: "Article 1",
-    description: "lorem ipsum ",
-    link: "#",
-  },
-  {
-    publishedAt: new Date(2022, 12, 24),
-    title: "Article 1",
-    description: "lorem ipsum",
-    link: "#",
-  },
-  {
-    publishedAt: new Date(2022, 12, 31),
-    title: "Article 1",
-    description: "lorem ipsum",
-    link: "#",
-  },
-  {
-    publishedAt: new Date(2023, 1, 1),
-    title: "Article 1",
-    description: "lorem ipsum",
-    link: "#",
+    title: "Présentation du projet",
+    description: "On vous présente notre projet de garage en ossature bois avec nos 13 étapes de construction.",
+    link: "/blog/articles/presentation_projet.md",
   },
 ];
 

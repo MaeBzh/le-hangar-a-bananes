@@ -16,6 +16,7 @@ import Tabs from "./components/Tabs.vue";
 import TeamMembers from "./components/TeamMembers.vue";
 import Tools from "./components/Tools.vue";
 import VPButton from "./components/VPButton.vue";
+import VPImage from "vitepress/dist/client/theme-default/components/VPImage.vue";
 
 export default {
   ...DefaultTheme,
