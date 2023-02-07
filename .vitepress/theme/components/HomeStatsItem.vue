@@ -1,9 +1,9 @@
 <template>
   <div class="border rounded-xl py- lg:py-12">
-    <h5 class="text-5xl font-bold text-white">
+    <h5 class="text-3xl font-bold text-gray-100">
       {{ value }}
     </h5>
-    <p class="text-xs font-medium tracking-wide text-indigo-100 uppercase">
+    <p class="text-xs font-medium tracking-wide uppercase text-gray-200">
       {{ title }}
     </p>
   </div>

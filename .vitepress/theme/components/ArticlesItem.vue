@@ -20,8 +20,8 @@
     >
       {{ title }}
     </a>
-    <p class="max-w-xs mx-auto mb-2">
-      {{ description }}
+    <p class="mb-2 text-justify">
+      {{ truncatedDescription }}
     </p>
 
     <VPButton
@@ -29,9 +29,8 @@
       size="small"
       rounded
       theme="alt"
-      aria-label="Read article"
-      title="Nori grape silver beet broccoli kombu beet"
-      text="Read article"
+      aria-label="Lire l'article"
+      text="Lire l'article"
     />
   </div>
 </template>
@@ -58,6 +57,11 @@ export default defineComponent({
     link: {
       type: String,
       required: true,
+    },
+  },
+  computed: {
+    truncatedDescription() {
+      return this.description.substring(0, 100) + "...";
     },
   },
   components: {
