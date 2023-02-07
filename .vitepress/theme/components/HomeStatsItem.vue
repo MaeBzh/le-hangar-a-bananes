@@ -1,7 +1,7 @@
 <template>
   <div class="border rounded-xl py- lg:py-12">
     <h5 class="text-5xl font-bold text-white">
-       {{ value }}
+      {{ value }}
     </h5>
     <p class="text-xs font-medium tracking-wide text-indigo-100 uppercase">
       {{ title }}

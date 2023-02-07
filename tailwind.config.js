@@ -6,9 +6,13 @@ module.exports = {
   content: ["./.vitepress/**/*.{js,ts,vue}", "./src/**/*.{js,ts,vue,md}"],
   theme: {
     colors: {
-      transparent: "transparent",
-      current: "currentColor",
-      ...colors,
+      inherit: 'inherit',
+      current: 'currentColor',
+      transparent: 'transparent',
+      black: colors.black,
+      white: colors.white,
+      gray: colors.gray,
+      blue: colors.blue,
     },
     screens: {
       xs: "375px",

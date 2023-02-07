@@ -60,7 +60,7 @@ export default defineComponent({
 <template>
   <component
     :is="component"
-    class="VPButton inline-block font-medium uppercase rounded border-2 shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
+    class="VPButton inline-block font-medium uppercase rounded border-solid border-2 shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out"
     :class="{
       'px-4 py-1.5 text-xs leading-tight': size === 'small',
       'px-6 py-2.5 text-xs leading-tight': size === 'medium',

@@ -1,7 +1,16 @@
 <template>
-  <div class="p-5 lg:p-10 text-center border border-gray-900 dark:border-white rounded">
+  <div
+    class="p-5 lg:p-10 text-center border border-gray-900 dark:border-white rounded"
+  >
     <p class="mb-2 text-xs font-semibold tracking-wide uppercase">
-      {{ date }}
+      {{
+        date.toLocaleDateString("fr-FR", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })
+      }}
     </p>
     <a
       href="/"
@@ -39,7 +48,7 @@ export default defineComponent({
       required: true,
     },
     date: {
-      type: String,
+      type: Date,
       required: true,
     },
     description: {

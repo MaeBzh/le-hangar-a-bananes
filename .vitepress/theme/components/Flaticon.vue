@@ -3,9 +3,7 @@
     <img
       v-if="typeof icon === 'string' || 'src' in icon"
       class="Flaticon"
-      v-bind="
-        typeof icon === 'string' ? $attrs : { ...icon, ...$attrs }
-      "
+      v-bind="typeof icon === 'string' ? $attrs : { ...icon, ...$attrs }"
       :src="withBase(typeof icon === 'string' ? icon : icon.src)"
       :alt="alt ?? (typeof icon === 'string' ? '' : icon.alt || '')"
     />

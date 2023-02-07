@@ -4,31 +4,35 @@ import "./tailwind.postcss";
 import DefaultTheme from "vitepress/theme";
 import "./custom.css";
 
-import Bar from "./components/charts/Bar.vue";
+import Articles from "./components/Articles.vue";
 import Card from "./components/Card.vue";
+import Bar from "./components/charts/Bar.vue";
 import Flaticon from "./components/Flaticon.vue";
+import HomeStats from "./components/HomeStats.vue";
+import Landing from "./components/Landing.vue";
 import LastUpdated from "./components/LastUpdated.vue";
-import Products from "./components/Products.vue";
+import Partners from "./components/Partners.vue";
 import Tabs from "./components/Tabs.vue";
 import TeamMembers from "./components/TeamMembers.vue";
-import LastArticles from "./components/LastArticles.vue";
-import Landing from "./components/Landing.vue";
-import HomeStats from "./components/HomeStats.vue";
+import Tools from "./components/Tools.vue";
+import VPButton from "./components/VPButton.vue";
 
 export default {
   ...DefaultTheme,
   enhanceApp(ctx: EnhanceAppContext) {
     DefaultTheme.enhanceApp(ctx);
     ctx.app
-      .component("Flaticon", Flaticon)
-      .component("LastUpdated", LastUpdated)
-      .component("Products", Products)
-      .component("TeamMembers", TeamMembers)
-      .component("Tabs", Tabs)
-      .component("Bar", Bar)
+      .component("Articles", Articles)
       .component("Card", Card)
-      .component("Landing", Landing)
+      .component("Bar", Bar)
+      .component("Flaticon", Flaticon)
       .component("HomeStats", HomeStats)
-      .component("LastArticles", LastArticles)
+      .component("Landing", Landing)
+      .component("LastUpdated", LastUpdated)
+      .component("Partners", Partners)
+      .component("Tabs", Tabs)
+      .component("TeamMembers", TeamMembers)
+      .component("Tools", Tools)
+      .component("VPButton", VPButton);
   },
 };

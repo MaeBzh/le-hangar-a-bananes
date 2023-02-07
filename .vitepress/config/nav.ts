@@ -7,6 +7,11 @@ const nav: DefaultTheme.NavItem[] = [
     activeMatch: '^/$'
   },
   {
+    text: 'Blog',
+    link: '/blog/index',
+    activeMatch: '/blog/'
+  },
+  {
     text: 'A propos de nous',
     link: '/about-us/index',
     activeMatch: '/about-us/'
@@ -16,11 +21,11 @@ const nav: DefaultTheme.NavItem[] = [
     link: '/tools/index',
     activeMatch: '/tools/'
   },
-  {
-    text: 'Statistiques',
-    link: '/stats/index',
-    activeMatch: '/stats/'
-  },
+  // {
+  //   text: 'Statistiques',
+  //   link: '/stats/index',
+  //   activeMatch: '/stats/'
+  // },
 ]
 
 export default nav

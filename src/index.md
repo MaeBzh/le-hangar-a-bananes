@@ -7,12 +7,17 @@ footer:
       link: https://www.flaticon.com/free-stickers/cabin
 ---
 
-<Landing>
+<script setup lang="ts">
+  import articles from './blog/articles'
+  import {tools} from './tools/tools'
+  const lastArticles = articles.slice(0, 3)
+</script>
+
+<Landing scrollId="lastArticles" class="text-white">
   <h1
     class="flex mb-6 font-sans text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl border-l-8 border-yellow-500 pl-4"
   >
-    <Flaticon :icon="{src: '/banane.png'}" class=""/>
-    Le hangar à Bananes
+    <Flaticon :icon="{src: '/banane.png'}" class=""/> Le hangar à Bananes
   </h1>
   <p class="mb-6 text-base text-justify md:text-lg">
     <strong>Bienvenue sur notre blog</strong>. Nous sommes deux amateurs
@@ -39,13 +44,37 @@ footer:
   </template>
 </Landing>
 
-<LastArticles :articles="[
-  {date: '16 Décembre 2022', title: 'Article 1', description: 'lorem ipsum ', link: '#'},
-]"/>
+<Articles id="lastArticles" :articles="lastArticles">
+<template v-slot:title>
+<Flaticon :icon="{ src: '/media/home/002-news.png' }" class="w-auto h-64" /> Derniers articles
+</template>
+</Articles>
+
+<div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+  <VPButton href="/blog/index.md" size="big" class="w-full max-w-xs mx-auto">
+    Voir tous les articles
+  </VPButton>
+</div>
 
 <HomeStats :stats="[
-  { title: 'Articles', value: 10 },
-  { title: 'Tags', value: 10 },
-  { title: 'Categories', value: 10 },
-  { title: 'Words', value: 10 },
+  { title: 'Articles de blog', value: articles.length },
+  { title: 'Outils', value: tools.length },
+  { title: 'Dépenses', value: '~4500€' },
+  { title: 'Pauses café', value: 8 },
 ]"  />
+
+<Partners :partners="[
+  {
+    title: 'Denis Matériaux',
+    image: 'https://www.denismateriaux.com/skin/frontend/rwd/dm/images/refonte/logo-denisMat.jpg',
+    link: 'https://www.denismateriaux.com'
+  }, {
+    title: 'Gefradis',
+    image: 'https://www.gefradis.fr/img/gefradis-logo-1673440793.jpg',
+    link: 'https://www.gefradis.fr'
+  }, {
+    title: 'DBi bois',
+    image: 'https://www.dbi-bois.fr/wp-content/uploads/2022/02/logo-dbi-300x116.png',
+    link: 'https://www.dbi-bois.fr'
+  }
+]" />

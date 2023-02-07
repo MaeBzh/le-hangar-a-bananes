@@ -28,6 +28,7 @@
         </div>
 
         <a
+          v-if="scrollId"
           @click="scrollTo()"
           aria-label="Scroll down"
           class="flex items-center justify-center w-10 h-10 mx-auto text-white duration-300 transform border border-gray-400 rounded-full hover:text-teal-accent-400 hover:border-teal-accent-400 hover:shadow hover:scale-110 cursor-pointer"
@@ -49,36 +50,47 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from "vue";
+<script lang="ts">
+import { defineComponent, onMounted, ref } from "vue";
 
-const isDark = ref(null);
-let observer = null;
+export default defineComponent({
+  name: "Landing",
+  props: {
+    scrollId: {
+      type: String,
+      default: "",
+    },
+  },
+  data() {
+    return {
+      observer: null,
+      isDark: false,
+    };
+  },
+  mounted() {
+    this.setDark();
+    this.observer = new MutationObserver(this.setDark);
+    this.observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  },
+  beforeUnmount() {
+    this.observer?.disconnect();
+  },
+  methods: {
+    setDark() {
+      this.isDark = document.documentElement.classList.contains("dark");
+    },
+    scrollTo() {
+      var el = document.getElementById(this.scrollId);
 
-const setDark = () => {
-  isDark.value = document.documentElement.classList.contains("dark");
-};
-
-function scrollTo() {
-  var el = document.getElementById("lastArticles");
-
-  el.scrollIntoView({
-    behavior: "smooth",
-    block: "start",
-    inline: "start",
-  });
-}
-
-onMounted(() => {
-  setDark();
-  observer = new MutationObserver(setDark);
-  observer.observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ["class"],
-  });
-});
-
-onBeforeUnmount(() => {
-  observer.disconnect();
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "start",
+      });
+    },
+  },
 });
 </script>
