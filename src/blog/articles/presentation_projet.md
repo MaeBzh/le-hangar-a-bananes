@@ -93,7 +93,7 @@ Il est important de prévoir comment seront évacués les eaux de pluie et de ru
 
 Dernière étape clé, on pourra enfin s'occuper de l'électricité, la plomberie, l'isolation et le parement intérieur.
 
-## Rendu finale
+## Rendu final
 
 Normalement, une fois les travaux terminés, notre garage devrait se rapprocher du rendu 3D ci-dessous.
 
@@ -103,3 +103,11 @@ Normalement, une fois les travaux terminés, notre garage devrait se rapprocher 
 On espère que notre projet vous donnera envie et vous aidera pour vos propres projets d'auto-construction ! N'hésitez pas à nous suivre sur <a href="https://www.facebook.com/profile.php?id=100088975922675" target="_blank" >notre page Facebook</a> pour suivre l'avancement et nous laisser un petit message.
 
 On vous donne rendez-vous dans un prochain article sur la réalisation du permis de construire.
+
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+<div class="fb-comments" data-href="http://localhost:5173/blog/articles/presentation_projet.html" data-width="" data-numposts="5"></div>

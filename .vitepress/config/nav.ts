@@ -21,11 +21,11 @@ const nav: DefaultTheme.NavItem[] = [
     link: '/tools/index',
     activeMatch: '/tools/'
   },
-  // {
-  //   text: 'Statistiques',
-  //   link: '/stats/index',
-  //   activeMatch: '/stats/'
-  // },
+  {
+    text: 'Politique de confidentialité',
+    link: '/confidentiality/index',
+    activeMatch: '/confidentiality/'
+  },
 ]
 
 export default nav
