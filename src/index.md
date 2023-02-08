@@ -5,17 +5,17 @@ footer:
   flaticons:
     - author: Kerismaker
       link: https://www.flaticon.com/free-stickers/cabin
+    - author: Stickers
+      link: https://www.flaticon.com/free-stickers/facebook
 ---
-
 <script setup lang="ts">
   import articles from './blog/articles'
   import {tools} from './tools/tools'
   const lastArticles = articles.slice(0, 3)
 </script>
-
 <Landing scrollId="lastArticles" class="text-white">
   <h1
-    class="flex mb-6 font-sans text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl border-l-8 border-yellow-500 pl-4"
+    class="flex mb-6 font-sans text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl border-l-8 border-[#eab308] pl-4"
   >
     <Flaticon :icon="{src: '/banane.png'}" class=""/> Le hangar à Bananes
   </h1>
@@ -51,7 +51,7 @@ footer:
 </template>
 </Articles>
 
-<div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+<div class="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
   <VPButton href="/blog/index.md" size="big" class="w-full max-w-xs mx-auto">
     Voir tous les articles
   </VPButton>
@@ -79,3 +79,4 @@ footer:
     link: 'https://www.dbi-bois.fr'
   }
 ]" />
+

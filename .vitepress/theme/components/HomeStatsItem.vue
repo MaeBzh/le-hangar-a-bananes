@@ -1,6 +1,6 @@
 <template>
-  <div class="border rounded-xl py- lg:py-12">
-    <h5 class="text-3xl font-bold text-gray-100">
+  <div class="border rounded-xl lg:py-12">
+    <h5 class="text-lg md:text-xl font-bold text-gray-100">
       {{ value }}
     </h5>
     <p class="text-xs font-medium tracking-wide uppercase text-gray-200">
