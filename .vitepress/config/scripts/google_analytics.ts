@@ -11,21 +11,10 @@ const googleAnalyticsScripts: HeadConfig[] = VITE_GOOGLE_ANALYTICS_ID
           src: `https://www.googletagmanager.com/gtag/js?id=${VITE_GOOGLE_ANALYTICS_ID}`,
         },
       ],
-      [
-        "script",
-        {},
-        `
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag(){
-          dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', '${VITE_GOOGLE_ANALYTICS_ID}');
-        `,
-      ],
+      ["script", {}, "window.dataLayer = window.dataLayer || [];"],
+      ["script", {}, "function gtag(){ dataLayer.push(arguments); }"],
+      ["script", {}, "gtag('js', new Date());"],
+      ["script", {}, `gtag('config', '${VITE_GOOGLE_ANALYTICS_ID}');`],
     ]
   : [];
 
