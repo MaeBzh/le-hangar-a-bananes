@@ -1,4 +1,5 @@
 import { EnhanceAppContext } from "vitepress";
+import { watch } from "vue";
 import "./tailwind.postcss";
 
 import DefaultTheme from "vitepress/theme";
@@ -16,7 +17,6 @@ import Tabs from "./components/Tabs.vue";
 import TeamMembers from "./components/TeamMembers.vue";
 import Tools from "./components/Tools.vue";
 import VPButton from "./components/VPButton.vue";
-import VPImage from "vitepress/dist/client/theme-default/components/VPImage.vue";
 
 export default {
   ...DefaultTheme,
@@ -35,5 +35,22 @@ export default {
       .component("TeamMembers", TeamMembers)
       .component("Tools", Tools)
       .component("VPButton", VPButton);
+
+    if (typeof window !== undefined) {
+      watch(
+        () => ctx.router.route.path,
+        (path) => {
+          // force facebook to parse content to show plugins
+          if ("FB" in window) {
+            setTimeout(() => (window as any).FB.XFBML.parse(), 1000);
+          }
+
+          // force google_analytics to get metrics
+          if("ga" in window) {
+            (window as any).ga('send', 'pageview', path);
+          }
+        }
+      );
+    }
   },
 };

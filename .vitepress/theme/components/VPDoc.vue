@@ -69,18 +69,16 @@ provide("onContentUpdated", onContentUpdated);
 .VPDoc {
   /* padding: 32px 24px 96px; */
   width: 100%;
+  padding: 0 20px;
 }
 
 @media (min-width: 768px) {
   .VPDoc {
-    /* padding: 48px 32px 128px; */
+    padding: 0;
   }
 }
 
 @media (min-width: 960px) {
-  .VPDoc {
-    /* padding: 32px 32px 0; */
-  }
 
   .VPDoc:not(.has-sidebar) .container {
     display: flex;
