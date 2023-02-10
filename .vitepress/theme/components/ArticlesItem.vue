@@ -1,6 +1,6 @@
 <template>
   <div
-    class="p-5 lg:p-10 text-center border border-gray-900 dark:border-white rounded"
+    class="p-5 lg:p-10 text-center border border-gray-900 dark:border-white rounded-xl"
   >
     <p class="mb-2 text-xs font-semibold tracking-wide uppercase">
       {{

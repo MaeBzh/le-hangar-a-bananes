@@ -36,24 +36,24 @@
   --vp-c-brand-dark: var(--vp-c-blue-dark);
   --vp-c-brand-darker: var(--vp-c-blue-darker);
 
-  --vp-button-brand-border: var(--vp-c-brand);
+  --vp-button-brand-border: var(--vp-c-brand-dark);
   --vp-button-brand-text: var(--vp-c-text-dark-1);
-  --vp-button-brand-bg: var(--vp-c-brand);
-  --vp-button-brand-hover-border: var(--vp-c-brand-light);
+  --vp-button-brand-bg: var(--vp-c-brand-dark);
+  --vp-button-brand-hover-border: var(--vp-c-brand-darker);
   --vp-button-brand-hover-text: var(--vp-c-text-dark-1);
-  --vp-button-brand-hover-bg: var(--vp-c-brand-light);
-  --vp-button-brand-active-border: var(--vp-c-brand-light);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-darker);
+  --vp-button-brand-active-border: var(--vp-c-brand-darker);
   --vp-button-brand-active-text: var(--vp-c-text-dark-1);
   --vp-button-brand-active-bg: var(--vp-button-brand-bg);
 
-  --vp-button-alt-border: var(--vp-c-brand);
+  --vp-button-alt-border: var(--vp-c-brand-dark);
   --vp-button-alt-text: var(--vp-c-text-light-1);
   --vp-button-alt-bg: transparent;
-  --vp-button-alt-hover-border: var(--vp-c-brand);
+  --vp-button-alt-hover-border: var(--vp-c-brand-dark);
   --vp-button-alt-hover-text: var(--vp-c-white);
-  --vp-button-alt-hover-bg: var(--vp-c-brand);
-  --vp-button-alt-active-border: var(--vp-c-brand);
-  --vp-button-alt-active-text: var(--vp-c-brand);
+  --vp-button-alt-hover-bg: var(--vp-c-brand-dark);
+  --vp-button-alt-active-border: var(--vp-c-brand-dark);
+  --vp-button-alt-active-text: var(--vp-c-brand-dark);
   --vp-button-alt-active-bg: transparent;
 
   --vp-button-sponsor-border: var(--vp-c-yellow-soft);

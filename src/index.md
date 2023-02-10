@@ -8,11 +8,21 @@ footer:
     - author: Stickers
       link: https://www.flaticon.com/free-stickers/facebook
 ---
+
 <script setup lang="ts">
   import articles from './blog/articles'
   import {tools} from './tools/tools'
   const lastArticles = articles.slice(0, 3)
+
+  function share() {
+    console.log(window?.FB.ui )
+    window?.FB.ui({
+      method: 'share',
+      href: window.location.href,
+    }, function(response){});
+  }
 </script>
+
 <Landing scrollId="lastArticles" class="text-white">
   <h1
     class="flex mb-6 font-sans text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl border-l-8 border-[#eab308] pl-4"
@@ -46,9 +56,9 @@ footer:
 </Landing>
 
 <Articles id="lastArticles" :articles="lastArticles">
-<template v-slot:title>
-<Flaticon :icon="{ src: '/media/home/002-news.png' }" class="w-auto h-64" /> Derniers articles
-</template>
+  <template v-slot:title>
+    <Flaticon :icon="{ src: '/media/home/002-news.png' }" class="w-auto h-64" /> Derniers articles
+  </template>
 </Articles>
 
 <div class="max-w-xl mb-10 md:mx-auto text-center lg:max-w-2xl md:mb-12">
@@ -62,7 +72,21 @@ footer:
   { title: 'Articles de blog', value: articles.length },
   { title: 'Etape en cours', value: 'Terrassement' },
   { title: 'Dépensés', value: '~4500€' },
-]"  />/
+]"  />
+
+<CTA>
+  <h2 class="flex max-w-lg m-6 font-sans text-2xl font-bold leading-none tracking-tight text-gray-900 dark:text-white sm:text-3xl">
+     Vous appréciez notre blog ?
+  </h2>
+  <p class="mb-6 text-base text-justify md:text-lg">
+    Aidez-nous à le faire grandir <strong class="text-blue">en un seul clic !</strong> Avec un like, un commentaire et un partage sur les liens en bas de chacun de nos articles, vous pouvez facilement contribuer à faire grandir et à améliorer ce blog. Votre participation est cruciale pour notre motivation et notre succès. Merci pour votre soutien !
+  </p>
+  <template #image>
+    <img src="/media/home/cta_like.png" class="w-auto max-h-64 qlign-center rounded-xl border border-black" />
+  </template>
+</CTA>
+
+<hr class="border-[var(--vp-c-divider-light)]" />
 
 <Partners :partners="[
   {
@@ -79,4 +103,6 @@ footer:
     link: 'https://www.dbi-bois.fr'
   }
 ]" />
+
+
 
