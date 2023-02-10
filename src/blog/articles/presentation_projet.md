@@ -105,14 +105,4 @@ On espère que notre projet vous donnera envie et vous aidera pour vos propres p
 
 On vous donne rendez-vous dans un prochain article sur la réalisation du permis de construire.
 
-<div class="fb-like" 
-  data-href="https://le-hangar-a-bananes.fr/blog/articles/presentation_projet.html" 
-  data-layout="standard" 
-  data-action="like" 
-  data-size="small"  
-  data-share="true"></div>
-
-<div class="fb-comments" 
-  data-href="https://le-hangar-a-bananes.fr/blog/articles/presentation_projet.html" 
-  data-width="100%" 
-  data-numposts="10"></div>
+<FBPlugins href="https://le-hangar-a-bananes.fr/blog/articles/presentation_projet.html" />
