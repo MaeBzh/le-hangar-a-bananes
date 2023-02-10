@@ -8,6 +8,8 @@ import "./custom.css";
 import Articles from "./components/Articles.vue";
 import Card from "./components/Card.vue";
 import Bar from "./components/charts/Bar.vue";
+import CTA from "./components/CTA.vue";
+import FBPlugins from "./components/FBPlugins.vue";
 import Flaticon from "./components/Flaticon.vue";
 import HomeStats from "./components/HomeStats.vue";
 import Landing from "./components/Landing.vue";
@@ -25,7 +27,9 @@ export default {
     ctx.app
       .component("Articles", Articles)
       .component("Card", Card)
+      .component("CTA", CTA)
       .component("Bar", Bar)
+      .component("FBPlugins", FBPlugins)
       .component("Flaticon", Flaticon)
       .component("HomeStats", HomeStats)
       .component("Landing", Landing)
@@ -46,8 +50,8 @@ export default {
           }
 
           // force google_analytics to get metrics
-          if("ga" in window) {
-            (window as any).ga('send', 'pageview', path);
+          if ("ga" in window) {
+            (window as any).ga("send", "pageview", path);
           }
         }
       );
