@@ -1,7 +1,7 @@
 <template>
   <!-- component -->
   <div
-    class="Tool relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg max-w-xs md:max-w-3xl mx-auto border mb-8"
+    class="Tool relative flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl  max-w-xs md:max-w-3xl mx-auto border border-black mb-8"
   >
     <div class="w-full md:w-1/3 bg-white dark:bg-gray-100 grid place-items-center rounded-tl-xl rounded-tr-xl sm:rounded-tr-none md:rounded-bl-xl p-1">
       <VPImage :image="tool.image" />
