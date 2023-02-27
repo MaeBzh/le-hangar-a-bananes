@@ -58,7 +58,7 @@ const flaticons = computed(() => {
 
 @media (min-width: 768px) {
   .VPFooter {
-    padding: 32px;
+    padding: 16px;
   }
 }
 

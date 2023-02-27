@@ -11,6 +11,11 @@ const themeConfig = {
   footer,
   lastUpdatedText: "Dernière mise à jour",
   outlineTitle: "Sommaire",
+  outline: 'deep',
+  docFooter: {
+    next: "Page suivante",
+    prev: "Page précédente",
+  },
 }
 
 export default themeConfig

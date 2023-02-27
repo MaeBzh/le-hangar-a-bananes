@@ -1,15 +1,16 @@
 import { EnhanceAppContext } from "vitepress";
-import { watch } from "vue";
 import "./tailwind.postcss";
 
 import DefaultTheme from "vitepress/theme";
 import "./custom.css";
 
+import VPImage from "vitepress/dist/client/theme-default/components/VPImage.vue";
 import Articles from "./components/Articles.vue";
 import Card from "./components/Card.vue";
 import Bar from "./components/charts/Bar.vue";
+import Comments from "./components/Comments.vue";
 import CTA from "./components/CTA.vue";
-import FBPlugins from "./components/FBPlugins.vue";
+import FBShareButton from "./components/FBShareButton.vue";
 import Flaticon from "./components/Flaticon.vue";
 import HomeStats from "./components/HomeStats.vue";
 import Landing from "./components/Landing.vue";
@@ -27,9 +28,10 @@ export default {
     ctx.app
       .component("Articles", Articles)
       .component("Card", Card)
+      .component("Comments", Comments)
       .component("CTA", CTA)
       .component("Bar", Bar)
-      .component("FBPlugins", FBPlugins)
+      .component("FBShareButton", FBShareButton)
       .component("Flaticon", Flaticon)
       .component("HomeStats", HomeStats)
       .component("Landing", Landing)
@@ -38,23 +40,7 @@ export default {
       .component("Tabs", Tabs)
       .component("TeamMembers", TeamMembers)
       .component("Tools", Tools)
-      .component("VPButton", VPButton);
-
-    if (typeof window !== undefined) {
-      watch(
-        () => ctx.router.route.path,
-        (path) => {
-          // force facebook to parse content to show plugins
-          if ("FB" in window) {
-            setTimeout(() => (window as any).FB.XFBML.parse(), 1000);
-          }
-
-          // force google_analytics to get metrics
-          if ("ga" in window) {
-            (window as any).ga("send", "pageview", path);
-          }
-        }
-      );
-    }
+      .component("VPButton", VPButton)
+      .component("VPImage", VPImage);
   },
 };

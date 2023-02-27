@@ -72,7 +72,7 @@ const showFooter = computed(() => {
 
 <style scoped>
 .VPDocFooter {
-  margin-top: 64px;
+  margin-top: 24px;
 }
 
 .edit-info {
@@ -112,7 +112,7 @@ const showFooter = computed(() => {
 
 .prev-next {
   border-top: 1px solid var(--vp-c-divider-light);
-  padding-top: 24px;
+  padding: 24px 0;
 }
 
 @media (min-width: 640px) {
