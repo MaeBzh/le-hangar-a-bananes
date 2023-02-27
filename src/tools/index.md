@@ -20,3 +20,9 @@ Ici, vous retrouverez une liste d'outils avec une photo et un avis personnel pou
 Certains des outils présentés sur cette page ont des liens d'affiliation. Les liens d'affiliation sont des liens qui nous permettent de gagner une commission si vous achetez un produit via ces liens. Cela nous permet de continuer à améliorer notre site et à vous offrir des contenus de qualité. Nous espérons que cette page vous sera utile dans vos projets de bricolage et de construction.
 <hr/>
 <Tools :tools="tools" />
+
+<Comments
+  pageId="tools" 
+  pageUrl="https://le-hangar-a-bananes.fr/tools/index.html" 
+  pageTitle="Nos outils"
+/>
