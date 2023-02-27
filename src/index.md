@@ -13,14 +13,6 @@ footer:
   import articles from './blog/articles'
   import {tools} from './tools/tools'
   const lastArticles = articles.slice(0, 3)
-
-  function share() {
-    console.log(window?.FB.ui )
-    window?.FB.ui({
-      method: 'share',
-      href: window.location.href,
-    }, function(response){});
-  }
 </script>
 
 <Landing scrollId="lastArticles" class="text-white">
@@ -75,12 +67,13 @@ footer:
 ]"  />
 
 <CTA>
-  <h2 class="flex max-w-lg m-6 font-sans text-2xl font-bold leading-none tracking-tight text-gray-900 dark:text-white sm:text-3xl">
-     Vous appréciez notre blog ?
+  <h2 class="flex max-w-lg mb-4 font-sans text-2xl font-bold leading-none tracking-tight text-gray-900 dark:text-white sm:text-3xl">
+     Aidez-nous à faire grandir notre blog
   </h2>
   <p class="mb-6 text-base text-justify md:text-lg">
-    Aidez-nous à le faire grandir <strong class="text-blue">en un seul clic !</strong> Avec un like, un commentaire et un partage sur les liens en bas de chacun de nos articles, vous pouvez facilement contribuer à faire grandir et à améliorer ce blog. Votre participation est cruciale pour notre motivation et notre succès. Merci pour votre soutien !
+    Notre blog est un projet en constante évolution et vous pouvez contribuer à notre avanture. Si vous avez apprécié notre contenu, n'hésitez pas à nous laisser un commentaire, partager nos articles ou aimer notre page Facebook. Votre soutien est précieux pour nous motiver et améliorer notre travail. Nous sommes reconnaissants pour toute forme d'encouragement que vous pourriez nous offrir.
   </p>
+  <FBShareButton size="big" />
   <template #image>
     <img src="/media/home/cta_like.png" class="w-auto max-h-64 qlign-center rounded-xl border border-black" />
   </template>
