@@ -1,6 +1,10 @@
 <template>
   <div class="text-center border border-gray-900 dark:border-white rounded-xl">
-    <VPImage v-if="image" :image="image" class="w-full h-[180px] rounded-t-xl" />
+    <VPImage
+      v-if="image"
+      :image="image"
+      class="w-full h-[180px] rounded-t-xl"
+    />
     <div class="p-5">
       <p class="mb-2 text-xs font-semibold tracking-wide uppercase">
         {{
@@ -45,7 +49,7 @@ import VPButton from "./VPButton.vue";
 
 export default defineComponent({
   name: "LastArticlesItem",
-  components: {VPImage},
+  components: { VPImage, VPButton },
   props: {
     title: {
       type: String,
@@ -75,9 +79,5 @@ export default defineComponent({
         : this.description;
     },
   },
-  components: {
-    VPButton,
-    VPImage
-},
 });
 </script>

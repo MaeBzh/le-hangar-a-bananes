@@ -6,7 +6,9 @@ import "./custom.css";
 
 import VPImage from "vitepress/dist/client/theme-default/components/VPImage.vue";
 import Articles from "./components/Articles.vue";
+import Image from "./components/Image.vue";
 import Card from "./components/Card.vue";
+import Carousel from "./components/Carousel.vue";
 import Bar from "./components/charts/Bar.vue";
 import Comments from "./components/Comments.vue";
 import CTA from "./components/CTA.vue";
@@ -27,7 +29,9 @@ export default {
     DefaultTheme.enhanceApp(ctx);
     ctx.app
       .component("Articles", Articles)
+      .component("Image", Image)
       .component("Card", Card)
+      .component("Carousel", Carousel)
       .component("Comments", Comments)
       .component("CTA", CTA)
       .component("Bar", Bar)

@@ -32,5 +32,8 @@
       "tailwindcss": {},
       "autoprefixer": {}
     }
+  },
+  "dependencies": {
+    "swiper": "^9.1.0"
   }
 }

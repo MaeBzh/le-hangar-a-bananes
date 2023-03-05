@@ -5,6 +5,7 @@ import { useData } from "vitepress";
 import { useSidebar } from "vitepress/dist/client/theme-default/composables/sidebar.js";
 import { isActive } from "vitepress/dist/client/theme-default/support/utils.js";
 import VPLink from "vitepress/dist/client/theme-default/components/VPLink.vue";
+import VPImage from "vitepress/dist/client/theme-default/components/VPImage.vue";
 
 const props = withDefaults(
   defineProps<{ item: SidebarItem; depth?: number }>(),
@@ -42,10 +43,30 @@ watchEffect(() => {
     v-if="item.type === 'button'"
     :href="item.link"
     class="text-center w-full"
-    style="margin: 4px 0 !important;"
+    style="margin: 4px 0 !important"
     :aria-label="item.text"
     :text="item.text"
   />
+
+  <div
+    v-else-if="item.publishedAt"
+    class="border border-gray-200 rounded-sm p-4 mt-4"
+  >
+    <VPLink
+      :class="{ active }"
+      :href="item.link"
+      @click="closeSideBar"
+      ref="link"
+      :tabindex="isSidebarEnabled || isSidebarOpen ? 0 : -1"
+    >
+      <VPImage :image="item.image" class="object-scale-down rounded-sm mr-2" />
+      <small v-if="item.publishedAt" class="item-date">
+        <time :datetime="isoDatetime"> {{ publishedAt }}</time>
+      </small>
+      <p v-html="item.title" class="text-sm font-medium mb-1"></p>
+      <p v-html="item.text" class="text-xs font-light"></p>
+    </VPLink>
+  </div>
 
   <VPLink
     v-else
@@ -57,14 +78,7 @@ watchEffect(() => {
     @click="closeSideBar"
     ref="link"
   >
-    <small v-if="item.publishedAt" class="item-date">
-      <time :datetime="isoDatetime"> {{ publishedAt }}</time>
-    </small>
-    <p
-      v-html="item.text"
-      class="link-text"
-      :class="{ light: depth > 1, 'mb-4': item.publishedAt }"
-    ></p>
+    <p v-html="item.text" class="link-text" :class="{ light: depth > 1 }"></p>
   </VPLink>
 
   <template
@@ -80,12 +94,12 @@ watchEffect(() => {
 .link {
   display: block;
   margin: 4px 0;
-  color: var(--vp-c-text-2);
+  color: var(--vp-c-text-1);
   transition: color 0.5s;
 }
 
 .link:hover {
-  color: var(--vp-c-text-1);
+  color: var(--vp-c-text-2);
 }
 
 .link.active {

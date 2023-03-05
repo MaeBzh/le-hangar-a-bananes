@@ -52,6 +52,8 @@ export type SidebarItem = {
   text: string;
   type?: "button" | "link";
   link?: string;
+  title?: string;
+  image?: DefaultTheme.ThemeableImage;
   publishedAt?: Date;
   items?: SidebarItem[];
 };
