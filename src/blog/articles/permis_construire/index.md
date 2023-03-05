@@ -16,22 +16,25 @@ footer:
       link: https://www.flaticon.com/authors/srip
 ---
 
+<Image src="/media/blog/permis_construire/introduction/miniature.jpg" alt="Illustration d'un plan de maison en cours de création avec un ordinateur" class="mb-8">
+  Illustration de <a href="https://www.freepik.com/free-vector/wooden-house-with-garage_6967668.htm" target="_blank">Frimufilms</a> sur <a href="https://www.freepik.com">Freepik.com</a>
+</Image>
+
 # Le permis de construire
 
 Le processus de construction commence toujours par l'obtention d'un permis de construire. Ce document officiel permet de valider le projet de construction et de s'assurer qu'il respecte les règles en vigueur. Il est obligatoire pour toute construction de plus de 20 mètres carrés.
-
-<img src="/media/blog/permis_construire/miniature.jpg" alt="Illustration d'un plan de maison en cours de création avec un ordinateur" class="object-scale-down px-8 w-full h-auto max-h-96" />
-<small class="block text-center text-gray-500 dark:text-gray-300">Illustration de <a href="https://www.freepik.com/free-vector/wooden-house-with-garage_6967668.htm" target="_blank">Frimufilms</a> sur <a href="https://www.freepik.com">Freepik.com</a></small>
 
 Pour notre projet d'autoconstruction d'un garage en ossature bois de 50 mètres carrés, nous avons basé notre dossier sur les études techniques réalisées lors de la construction de notre maison en ossature bois. Cela nous a permis de réaliser notre permis de construire dans les règles sans l'aide d'un professionnel.
 
 Bien que notre projet soit relativement simple, obtenir un permis de construire peut être complexe. Nous avons donc décidé de détailler chaque étape de notre processus de demande de permis de construire en plusieurs chapitres :
 
-- [Les outils, sites et logiciels](/blog/articles/permis_construire/liste_outils.md)
-- Le plan de situation (En cours d'écriture)
-- Le plan de masse (Coming soon)
-- Le plan de coupe (Coming soon)
-- La notice explicative (Coming soon)
+- [Les sites et logiciels](/blog/articles/permis_construire/sites_et_logiciels.md)
+- [PC01 Le plan de situation](/blog/articles/permis_construire/plan_de_situation.md)
+- [PC02 Le plan de masse](/blog/articles/permis_construire/plan_de_masse.md)
+- [PC03 Le plan de coupe](/blog/articles/permis_construire/plan_de_coupe.md)
+- [PC04 La notice explicative](/blog/articles/permis_construire/notice_explicative.md)
+- [PC05 Les plans de façades](/blog/articles/permis_construire/plan_de_facades.md)
+- [PC06, PC07 et PC08 Photos et insertion paysage](/blog/articles/permis_construire/photos_insertion_paysage.md)
 
 Chaque page contient les documents que nous avons réalisés pour notre projet et des explications détaillées pour vous aider à comprendre chaque étape.
 

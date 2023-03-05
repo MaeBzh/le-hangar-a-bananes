@@ -23,6 +23,7 @@ export default defineConfig({
       "./VPNavbar.vue": `${componentsDirectory}/VPNavbar.vue`,
       "./VPNavBarTitle.vue": `${componentsDirectory}/VPNavBarTitle.vue`,
       "./components/VPSidebar.vue": `${componentsDirectory}/VPSidebar.vue`,
+      "./VPSidebarGroup.vue": `${componentsDirectory}/VPSidebarGroup.vue`,
       "./VPSidebarLink.vue": `${componentsDirectory}/VPSidebarLink.vue`,
 
       "../support/sidebar.js": resolve(__dirname, "../.vitepress/theme/sidebar.js"),

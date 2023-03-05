@@ -23,9 +23,11 @@ const sidebar: SidebarMulti = {
       text: "Les derniers articles",
       items: articles.slice(0, 5).map((article) => {
         return {
-          text: article.title,
+          title: article.title,
+          text: article.description,
           link: article.link,
           publishedAt: article.publishedAt,
+          image: article.image,
         };
       }),
     },

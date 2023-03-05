@@ -6,7 +6,6 @@ import "./custom.css";
 
 import VPImage from "vitepress/dist/client/theme-default/components/VPImage.vue";
 import Articles from "./components/Articles.vue";
-import Image from "./components/Image.vue";
 import Card from "./components/Card.vue";
 import Carousel from "./components/Carousel.vue";
 import Bar from "./components/charts/Bar.vue";
@@ -15,6 +14,7 @@ import CTA from "./components/CTA.vue";
 import FBShareButton from "./components/FBShareButton.vue";
 import Flaticon from "./components/Flaticon.vue";
 import HomeStats from "./components/HomeStats.vue";
+import Image from "./components/Image.vue";
 import Landing from "./components/Landing.vue";
 import LastUpdated from "./components/LastUpdated.vue";
 import Partners from "./components/Partners.vue";

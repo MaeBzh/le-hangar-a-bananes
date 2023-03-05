@@ -5,10 +5,10 @@ aside: true
 head:
   - - meta
     - name: description
-      content: On vous présente les outils et sites que nous avons utilisés pour réussir notre demande de permis de construire concernant l'autoconstruction de notre garage en ossature bois de 50 mètres carrés.
+      content: On vous présente les sites et logiciels que nous avons utilisés pour réussir notre demande de permis de construire concernant l'autoconstruction de notre garage en ossature bois de 50 mètres carrés.
   - - meta
     - name: keywords
-      content: garage ossature bois, auto-construction, bricolage, permis de construire, outils et sites, logiciels, kozikaza, sweethome3d, archifacile, paint.net, gimp, photofiltre 7, openstreetmap, cadastre.gouv.fr, photoshop, sketchup, layout, plan de situation, plan de masse, plan de coupe, notice explicative
+      content: garage ossature bois, auto-construction, bricolage, permis de construire, outils et sites, logiciels, kozikaza, sweethome3d, archifacile, paint.net, gimp, photofiltre 7, openstreetmap, cadastre.gouv.fr, photoshop, sketchup, layout, archifacile, freecad, freelem
 
 footer:
   flaticons:
@@ -18,12 +18,12 @@ footer:
       link: https://www.flaticon.com/authors/smashicons
     - author: Freepik
       link: https://www.freepik.com
-  freepiks:
-    - author: frimufilms
-      link: https://www.freepik.com/free-vector/wooden-house-with-garage_6967668.htm
 ---
+<Image src="/media/blog/permis_construire/sites_logiciels/miniature.jpg" alt="Illustration d'un plan de maison en cours de création avec un ordinateur" class="mb-8">
+  Illustration de <a href="https://www.freepik.com/free-vector/wooden-house-with-garage_6967668.htm" target="_blank">Frimufilms</a> sur <a href="https://www.freepik.com">Freepik.com</a>
+</Image>
 
-# Les outils, sites et logiciels utiles
+# Les sites et logiciels utiles
 
 Avant de nous lancer dans le permis de construire, il est crucial d'avoir les bons outils à disposition. Nous avons dressé une liste des différents outils, sites et logiciels que nous avons utilisés pour obtenir notre permis de construire. Nous avons inclus des alternatives gratuites et payantes, mais si vous avez des suggestions à partager, n'hésitez pas à nous en faire part.
 
@@ -31,9 +31,8 @@ Il est important de noter que tous les plans peuvent être réalisés à la main
 
 ## <Flaticon :icon="{src:'/media/blog/permis_construire/liste_outils/001-map.png'}" class="inline-flex" /> Cartographie et cadastre
 
-[OpenStreetMap](https://www.openstreetmap.org/#map=6/46.449/2.210) est un site gratuit et open-source pour les cartes et les vues satellites.
-
 [Cadastre.gouv.fr](https://cadastre.gouv.fr/scpc/accueil.do) est le site officiel du cadastre français.
+[Geoportail.gouv.fr](https://www.geoportail.gouv.fr/donnees/parcelles-cadastrales) est un site officiel français où l'on peut retrouver des cartes comme OpenStreetMap avec de nombreuses informations utiles comme le niveau de sismicité, les parcelles cadastrales, l'altitude, etc.
 
 ## <Flaticon :icon="{src:'/media/blog/permis_construire/liste_outils/002-paint.png'}" class="inline-flex" /> Dessin et montage photo
 
@@ -54,7 +53,7 @@ En alternative, nous avons également retenu ces logiciels gratuits mais il en e
 
 [Sketchup](https://www.sketchup.com/fr) Sketchup est un logiciel de modélisation 3D que nous avons utilisé pour dessiner en détail le projet (fondation, soubassement, ossature bois, etc). Bien qu'il existe une version gratuite sur navigateur, nous avions déjà la version Pro pour Windows qui est très utile pour des projets de menuiserie. L'avantage de Sketchup Pro, c'est qu'il est fourni avec un autre logiciel : [Layout](https://www.sketchup.com/fr/products/layout) qui permet de convertir rapidement et facilement un plan 3D en 2D avec toutes les cotations nécessaires. Nous avons consacré beaucoup de temps à la modélisation 3D sur Sketchup pour faciliter l'évaluation des besoins en matériaux. Si vous êtes intéressé par Sketchup Pro, sachez qu'il existe une version d'essai gratuite de 30 jours (et vous pouvez même renouveler cette période en utilisant différentes adresses e-mail 🤫).
 
-En alternative à Sketchup et Layout, il existe un autre logiciel gratuit et open-source que nous connaissons : [Freecad](https://freecad.org/). Il permet de faire des plans 2D et 3D, et dispose d'une communauté active qui partage de nombreux tutoriels. 
+En alternative à Sketchup et Layout, il existe un autre logiciel gratuit et open-source que nous connaissons : [FreeCAD](https://www.freecad.org/?lang=fr). Il permet de faire des plans 2D et 3D, et dispose d'une communauté active qui partage de nombreux tutoriels. D'ailleur, on vous conseil celui-ci pour réaliser des plans 2D sur FreeCAD: [Tutoriel](https://wiki.freecad.org/Manual:Traditional_2D_drafting/fr)
 
 ## <Flaticon :icon="{src:'/media/blog/permis_construire/liste_outils/003-design.png'}" class="inline-flex" /> Calculs de structure
 

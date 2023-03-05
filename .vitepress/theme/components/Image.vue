@@ -1,23 +1,23 @@
 <template>
-  <a v-if="clickable" :href="src" target="_blank">
+  <a v-if="clickable" :href="src" target="_blank" :class="this.$attrs.class">
     <VPImage
       :image="{ src, alt }"
-      class="object-scale-down px-8 m-auto w-auto h-auto max-h-96 border border-[var(--vp-c-divider-dark)] dark:border-0"
+      class="object-scale-down px-8 m-auto w-auto h-auto max-h-96"
     />
     <small class="block text-center text-gray-500 dark:text-gray-300">
       <slot>{{ alt }}</slot>
     </small>
   </a>
 
-  <template v-else>
+  <div :class="this.$attrs.class" v-else>
     <VPImage
       :image="{ src, alt }"
-      class="object-scale-down px-8 m-auto w-auto h-auto max-h-96 border border-[var(--vp-c-divider-dark)] dark:border-0"
+      class="object-scale-down px-8 m-auto w-auto h-auto max-h-96"
     />
     <small class="block text-center text-gray-500 dark:text-gray-300">
       <slot>{{ alt }}</slot>
     </small>
-  </template>
+  </div>
 </template>
 
 <script lang="ts">
@@ -42,7 +42,8 @@ export default defineComponent({
       default: false,
     },
   },
+  mounted() {
+    console.log();
+  },
 });
 </script>
-
-
