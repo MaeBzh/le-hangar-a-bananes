@@ -15,12 +15,13 @@
       class="grid max-w-sm gap-5 mb-8 lg:grid-cols-3 sm:mx-auto lg:max-w-full"
     >
       <ArticlesItem
-        v-for="({ title, publishedAt, description, link }, index) in articles"
+        v-for="({ title, publishedAt, description, image, link }, index) in articles"
         :key="index"
         :date="publishedAt"
         :title="title"
         :description="description"
         :link="link"
+        :image="image"
       />
     </div>
   </section>

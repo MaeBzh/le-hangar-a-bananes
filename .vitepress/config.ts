@@ -14,5 +14,5 @@ export default defineConfig({
   ],
   srcDir: "src",
   lastUpdated: true,
-  themeConfig,
+  themeConfig: themeConfig as any,
 });

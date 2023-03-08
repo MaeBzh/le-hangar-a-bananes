@@ -8,13 +8,13 @@ Le blog "Le Hangar à Bananes" respecte la vie privée de ses utilisateurs et pr
 
 ## Collecte et utilisation des informations
 
-Le blog "Le Hangar à Bananes" utilise le plugin Facebook pour gérer les commentaires sur les articles et Google Analytics pour collecter des informations sur les habitudes de navigation des utilisateurs. Les informations collectées incluent :
+Le blog "Le Hangar à Bananes" utilise le plugin Cusdis pour gérer les commentaires sur les articles et Google Analytics pour collecter des informations sur les habitudes de navigation des utilisateurs. Les informations collectées incluent :
 
-**Informations personnelles** : nom et adresse électronique fournies par les utilisateurs lorsqu'ils laissent des commentaires sur les articles.
+**Informations personnelles** : pseudonyme et adresse électronique fournies par les utilisateurs lorsqu'ils laissent des commentaires sur les articles.
 
 **Informations techniques** : adresse IP, type de navigateur, informations sur le système d'exploitation, pages visitées, durée de la visite, etc.
 
-Les informations personnelles collectées via le plugin Facebook seront utilisées pour publier les commentaires sur les articles et pour permettre aux utilisateurs de recevoir des notifications de nouveaux commentaires. Les informations techniques collectées par Google Analytics seront utilisées pour comprendre comment les utilisateurs interagissent avec le blog et pour améliorer la qualité de nos services.
+Les informations personnelles collectées via le plugin Cusdis seront utilisées pour publier les commentaires sur les articles et pour permettre aux utilisateurs de recevoir des notifications de nouveaux commentaires. Les informations techniques collectées par Google Analytics seront utilisées pour comprendre comment les utilisateurs interagissent avec le blog et pour améliorer la qualité de nos services.
 
 ## Partage des informations
 

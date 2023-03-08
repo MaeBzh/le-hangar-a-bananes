@@ -24,6 +24,7 @@ jobs:
         touch .env.production
         echo VITE_FACEBOOK_PROFIL_ID=${{ secrets.FACEBOOK_PROFIL_ID }} >> .env.production
         echo VITE_FACEBOOK_APP_ID=${{ secrets.FACEBOOK_APP_ID }} >> .env.production
+        echo VITE_CUSDIS_APP_ID=${{ secrets.CUSDIS_APP_ID }} >> .env.production
         echo VITE_GOOGLE_ANALYTICS_ID=${{ secrets.GOOGLE_ANALYTICS_ID }} >> .env.production
         echo VITE_BUYMEACOFFEE_ID=${{ secrets.BUYMEACOFFEE_ID }} >> .env.production
         cat .env.production

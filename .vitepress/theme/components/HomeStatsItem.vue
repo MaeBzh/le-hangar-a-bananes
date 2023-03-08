@@ -20,7 +20,7 @@ export default defineComponent({
       required: true,
     },
     value: {
-      type: Number,
+      type: [String, Number],
       required: true,
     },
   },
