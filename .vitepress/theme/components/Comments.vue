@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onMounted, ref } from "vue";
 import FBShareButton from "./FBShareButton.vue";
 
 export default defineComponent({
@@ -53,20 +53,17 @@ export default defineComponent({
       isDark: false,
     };
   },
-  mounted() {
-    this.setDark();
-    this.observer = new MutationObserver(this.setDark);
-    this.observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-    this.initCusdis();
-  },
-  beforeUnmount() {
-    this.observer?.disconnect();
-  },
-  methods: {
-    initCusdis() {
+  setup() {
+    const cusdisAppId = ref("");
+
+    const refreshCusdis = () => {
+      const el = document.getElementById("cusdis_thread");
+      (window as any).CUSDIS?.renderTo(el);
+    };
+
+    onMounted(() => {
+      cusdisAppId.value = (window as any).CUSDIS_APP_ID;
+
       if (!(window as any).CUSDIS) {
         const script = document.createElement("script");
         script.setAttribute("defer", "");
@@ -75,27 +72,41 @@ export default defineComponent({
         document.head.appendChild(script);
 
         setTimeout(() => {
-          (window as any).CUSDIS?.setTheme(this.isDark ? "dark" : "light");
+          const isDark = document.documentElement.classList.contains("dark");
+
+          (window as any).CUSDIS?.setTheme(isDark ? "dark" : "light");
         }, 1000);
       }
-    },
+    });
+
+    return {
+      cusdisAppId,
+      refreshCusdis,
+    };
+  },
+  mounted() {
+    this.setDark();
+    this.observer = new MutationObserver(this.setDark);
+    this.observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+  },
+  beforeUnmount() {
+    this.observer?.disconnect();
+  },
+  methods: {
     setDark() {
       this.isDark = document.documentElement.classList.contains("dark");
     },
     toogleShowComments() {
       this.showComments = !this.showComments;
       if (this.showComments) {
-        this.$nextTick(() => {
-          const el = document.getElementById("cusdis_thread");
-          (window as any).CUSDIS?.renderTo(el);
-        });
+        this.$nextTick(this.refreshCusdis);
       }
     },
   },
   computed: {
-    cusdisAppId() {
-      return (window as any).CUSDIS_APP_ID;
-    },
     btnText() {
       return this.showComments
         ? "Masquer les commentaires"

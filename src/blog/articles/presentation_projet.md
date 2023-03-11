@@ -34,7 +34,12 @@ footer:
 ---
 
 <script setup lang="ts">
-  const facebookProfileUrl = `https://www.facebook.com/profile.php?id=${window.FACEBOOK_PROFILE_ID}`;
+  import { ref, onMounted } from 'vue'
+  const facebookProfileUrl = ref('')
+
+  onMounted(() => {
+    facebookProfileUrl.value = `https://www.facebook.com/profile.php?id=${window.FACEBOOK_PROFILE_ID}`;
+  });
 </script>
 
 # Présentation du projet

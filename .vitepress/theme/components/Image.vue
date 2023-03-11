@@ -1,5 +1,5 @@
 <template>
-  <a v-if="clickable" :href="src" target="_blank" :class="this.$attrs.class">
+  <a v-if="clickable" :href="src" target="_blank" :class="$attrs.class">
     <VPImage
       :image="{ src, alt }"
       class="object-scale-down px-8 m-auto w-auto h-auto max-h-96"
@@ -9,7 +9,7 @@
     </small>
   </a>
 
-  <div :class="this.$attrs.class" v-else>
+  <div :class="$attrs.class" v-else>
     <VPImage
       :image="{ src, alt }"
       class="object-scale-down px-8 m-auto w-auto h-auto max-h-96"
@@ -41,9 +41,6 @@ export default defineComponent({
       required: false,
       default: false,
     },
-  },
-  mounted() {
-    console.log();
   },
 });
 </script>

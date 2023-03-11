@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import type { SidebarItem } from "../types";
-import { Ref, computed, inject, ref, watchEffect } from "vue";
 import { useData } from "vitepress";
+import VPImage from "vitepress/dist/client/theme-default/components/VPImage.vue";
+import VPLink from "vitepress/dist/client/theme-default/components/VPLink.vue";
 import { useSidebar } from "vitepress/dist/client/theme-default/composables/sidebar.js";
 import { isActive } from "vitepress/dist/client/theme-default/support/utils.js";
-import VPLink from "vitepress/dist/client/theme-default/components/VPLink.vue";
-import VPImage from "vitepress/dist/client/theme-default/components/VPImage.vue";
+import { computed, inject, onMounted, ref, watchEffect } from "vue";
+import type { SidebarItem } from "../types";
 
 const props = withDefaults(
   defineProps<{ item: SidebarItem; depth?: number }>(),
@@ -21,19 +21,21 @@ const active = computed(() =>
   isActive(page.value.relativePath, props.item.link)
 );
 
-const { isSidebarEnabled } = useSidebar();
+const { isSidebarEnabled, isOpen: isSidebarOpen } = useSidebar();
 const closeSideBar = inject("close-sidebar") as () => void;
-const isSidebarOpen = inject("is-sidebar-open") as Ref<boolean>;
 
 const date = computed(() => new Date(props.item?.publishedAt));
 const isoDatetime = computed(() => date.value.toISOString());
 const publishedAt = ref("");
 
 const link = ref<InstanceType<typeof VPLink> | null>(null);
-watchEffect(() => {
-  if (isSidebarOpen.value && active.value) {
-    link.value?.$el?.focus();
-  }
+
+onMounted(() => {
+  watchEffect(() => {
+    if (isSidebarOpen && active.value) {
+      link.value?.$el?.focus();
+    }
+  });
   publishedAt.value = date.value.toLocaleDateString(window.navigator.language);
 });
 </script>

@@ -45,7 +45,7 @@ Pour la deuxième partie du document, le plus simple est d'utiliser [site du cad
 
 ### 3. Fusionner les deux documents en un seul
 
-La dernière étape consiste à fusionner les deux documents en un seul. Pour cela, il suffit d'utiliser un logiciel de traitement d'image. Si besoin, vous pouvez jeter un coup d'œil à notre page concernant [les outils et logiciels](http://localhost:5173/blog/articles/permis_construire/liste_outils.html#dessin-et-montage-photo) pour le permis de construire. Il est important que les informations suivantes apparaissent sur le document final :
+La dernière étape consiste à fusionner les deux documents en un seul. Pour cela, il suffit d'utiliser un logiciel de traitement d'image. Si besoin, vous pouvez jeter un coup d'œil à notre page concernant [les outils et logiciels](/blog/articles/permis_construire/sites_et_logiciels.html#dessin-et-montage-photo) pour le permis de construire. Il est important que les informations suivantes apparaissent sur le document final :
 
 - Nom de la route qui passe devant le terrain
 - Numéros de parcelles concernées par le projet
