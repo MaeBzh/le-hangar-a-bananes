@@ -1,12 +1,12 @@
 import { loadEnv } from "vite";
 import { HeadConfig } from "vitepress";
 
-const { VITE_FACEBOOK_PROFIL_ID, VITE_FACEBOOK_APP_ID } = loadEnv("production", process.cwd());
+const { VITE_FACEBOOK_PROFILE_ID, VITE_FACEBOOK_APP_ID } = loadEnv("production", process.cwd());
 const facebookScripts: HeadConfig[] = [
   [
     "script",
     {},
-    `window.FACEBOOK_PROFIL_ID = "${VITE_FACEBOOK_PROFIL_ID}";`,
+    `window.FACEBOOK_PROFILE_ID = "${VITE_FACEBOOK_PROFILE_ID}";`,
   ],
   [
     "script",

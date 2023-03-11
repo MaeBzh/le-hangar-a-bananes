@@ -1,7 +1,6 @@
-
-
 <template>
   <VPButton
+    v-if="facebookShareUrl"
     :href="facebookShareUrl"
     target="_blank"
     rel="noopener noreferrer"
@@ -12,29 +11,32 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted, ref } from "vue";
 
 export default defineComponent({
-  name: 'FBShareButton',
+  name: "FBShareButton",
   props: {
     size: {
       type: String,
-      default: 'small',
-    }
+      default: "small",
+    },
   },
-  computed: {
-    currentUrl() {
-      return `https://le-hangar-a-bananes.fr` + window.location.pathname;
-    },
-    facebookShareUrl() {
-        let url = 'https://www.facebook.com/dialog/share';
-        url += '?app_id=' + (window as any).FACEBOOK_APP_ID;
-        url += '&display=popup';
-        url += '&href=' + this.currentUrl;
-        url += '&redirect_uri=' + this.currentUrl;
+  setup() {
+    const facebookShareUrl = ref("");
 
-        return url;
-    },
+    onMounted(() => {
+      let url = "https://www.facebook.com/dialog/share";
+      url += "?app_id=" + (window as any).FACEBOOK_APP_ID;
+      url += "&display=popup";
+      url += "&href=" + window.location.href;
+      url += "&redirect_uri=" + window.location.href;
+
+      facebookShareUrl.value = url;
+    });
+
+    return {
+      facebookShareUrl,
+    };
   },
 });
 </script>
