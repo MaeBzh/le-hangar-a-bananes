@@ -9,7 +9,12 @@
 
   <hr />
 
-  <transition name="fade">
+  <transition
+    enter-from-class="opacity-0"
+    leave-to-class="opacity-0"
+    enter-active-class="transition duration-400"
+    leave-active-class="transition duration-400"
+  >
     <div
       v-show="showComments"
       id="cusdis_thread"
@@ -18,13 +23,15 @@
       :data-page-id="pageId"
       :data-page-url="pageUrl"
       :data-page-title="pageTitle"
-      :data-theme="isDark ? 'dark' : 'light'"
+      :data-theme="isDark === false ? 'light' : 'dark'"
     ></div>
   </transition>
 </template>
 
 <script lang="ts">
+import { useData } from "vitepress";
 import { defineComponent, onMounted, ref } from "vue";
+
 import FBShareButton from "./FBShareButton.vue";
 
 export default defineComponent({
@@ -49,16 +56,20 @@ export default defineComponent({
   data() {
     return {
       showComments: false,
-      observer: null,
-      isDark: false,
     };
   },
   setup() {
+    const isDark = useData().isDark;
+
     const cusdisAppId = ref("");
 
     const refreshCusdis = () => {
       const el = document.getElementById("cusdis_thread");
       (window as any).CUSDIS?.renderTo(el);
+    };
+
+    const setCusdisTheme = (theme: "light" | "dark" | "auto") => {
+      (window as any).CUSDIS?.setTheme(theme);
     };
 
     onMounted(() => {
@@ -70,39 +81,27 @@ export default defineComponent({
         script.setAttribute("async", "");
         script.setAttribute("src", "https://cusdis.com/js/cusdis.es.js");
         document.head.appendChild(script);
-
-        setTimeout(() => {
-          const isDark = document.documentElement.classList.contains("dark");
-
-          (window as any).CUSDIS?.setTheme(isDark ? "dark" : "light");
-        }, 1000);
       }
     });
 
     return {
+      isDark,
       cusdisAppId,
       refreshCusdis,
+      setCusdisTheme,
     };
   },
-  mounted() {
-    this.setDark();
-    this.observer = new MutationObserver(this.setDark);
-    this.observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-  },
-  beforeUnmount() {
-    this.observer?.disconnect();
+  watch: {
+    "isDark.value"(val) {
+      const theme = val === false ? "light" : "dark";
+      this.setCusdisTheme(theme);
+    },
   },
   methods: {
-    setDark() {
-      this.isDark = document.documentElement.classList.contains("dark");
-    },
     toogleShowComments() {
       this.showComments = !this.showComments;
       if (this.showComments) {
-        this.$nextTick(this.refreshCusdis);
+        this.$nextTick(this.refreshCusdis.bind(this));
       }
     },
   },
