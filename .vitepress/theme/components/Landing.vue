@@ -3,7 +3,7 @@
     <div class="absolute inset-x-0 bottom-0">
       <svg
         viewBox="0 0 224 12"
-        :fill="isDark ? 'var(--vp-c-black-soft)' : 'white'"
+        :fill="isDark !== false ? 'var(--vp-c-black-soft)' : 'white'"
         class="w-full -mb-1 text-white"
         preserveAspectRatio="none"
       >
@@ -51,7 +51,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from "vue";
+import { useData } from "vitepress";
+import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Landing",
@@ -61,27 +62,12 @@ export default defineComponent({
       default: "",
     },
   },
-  data() {
-    return {
-      observer: null,
-      isDark: false,
-    };
-  },
-  mounted() {
-    this.setDark();
-    this.observer = new MutationObserver(this.setDark);
-    this.observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
-  },
-  beforeUnmount() {
-    this.observer?.disconnect();
+  setup() {
+    const { isDark } = useData();
+
+    return { isDark };
   },
   methods: {
-    setDark() {
-      this.isDark = document.documentElement.classList.contains("dark");
-    },
     scrollTo() {
       var el = document.getElementById(this.scrollId);
 
