@@ -30,7 +30,8 @@
 
 <script lang="ts">
 import { useData } from "vitepress";
-import { defineComponent, onMounted, ref, watchEffect } from "vue";
+import { defineComponent, onMounted, ref } from "vue";
+
 import FBShareButton from "./FBShareButton.vue";
 
 export default defineComponent({
@@ -59,6 +60,7 @@ export default defineComponent({
   },
   setup() {
     const isDark = useData().isDark;
+
     const cusdisAppId = ref("");
 
     const refreshCusdis = () => {

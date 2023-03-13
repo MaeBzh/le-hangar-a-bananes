@@ -64,5 +64,5 @@ Cependant, il est important de rappeler que l'étude de structure est un domaine
 <Comments
   pageId="permis_construire_sites_logiciels" 
   pageUrl="https://le-hangar-a-bananes.fr/blog/articles/permis_construire/sites_logiciels.html" 
-  pageTitle="Le permis de construire - Liste des outils"
+  pageTitle="Le permis de construire - Sites et logiciels utiles"
 />
